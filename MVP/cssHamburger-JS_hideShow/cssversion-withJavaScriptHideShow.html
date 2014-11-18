@@ -6,116 +6,199 @@
     </title>
 
     <link rel="stylesheet" type="text/css" href="css/cssversion.css">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/accordian.css">
 
   </head>
   <body>
 
-    <ul class="navigation">
-      <li class="nav-item"><button class="navButton" id="basicRulesBtn">Basic Rules of the Game</a></li>
-      <li class="nav-item"><button class="navButton" id="outOfBoundsBtn">Out-of-Bounds</button></li>
-      <li class="nav-item"><button class="navButton" id="lostDiscBtn">Lost Disc</button></li>
-      <li class="nav-item"><button class="navButton" id="obstablesBtn">Obstacles &amp; Relief</button></li>
-      <li class="nav-item"><button class="navButton" id="courtesyBtn">Courtesy</button></li>
-      <li class="nav-item"><button class="navButton" id="optionalBtn">Optional Relif &amp; Optional Re-Throw</button></li>
-      <li class="nav-item"><button class="navButton" id="excessiveBtn">Excessive Time</button></li>
-      <li class="nav-item"><button class="navButton" id="misplayBtn">Misplay</button></li>
-      <li class="nav-item"><button class="navButton" id="mandatoriesBtn">Mandatories</button></li>
-      <li class="nav-item"><button class="navButton" id="interferenceBtn">Interference</button></li>
-      <li class="nav-item"><button class="navButton" id="provisionalBtn">Provisional Throws</button></li>
-      <li class="nav-item"><button class="navButton" id="applicationBtn">Application of the Rules</button></li>
-    </ul>
+    <nav class="sub-navigation">
+      <img src="imgs/placeholder.svg">
+      <header></header>
+      <div class="close-menu" id="check-state">
+        <span class="sub-nav-item">Description of the Game</span>
+        <span class="sub-nav-item">Teeing Off</span>
+        <span class="sub-nav-item">Establishing Position</span>
+        <span class="sub-nav-item">Marking The Lie</span>
+        <span class="sub-nav-item">Throwing from a Stance</span>
+        <span class="sub-nav-item">Holing Out</span>
+        <span class="sub-nav-item">Order Of Play</span>
+        <span class="sub-nav-item">Definitions</span>
+      </div>
+    </nav>
+
+    <input type="checkbox" id="sub-nav-trigger" class="sub-nav-trigger" />
+
+    <nav class="navigation">
+      <header></header>
+      <label for="sub-nav-trigger"><span class="nav-item" id="basicRulesBtn">Basic Rules</span></label>
+      <div class="close-menu">
+        <span class="nav-item" id="outOfBoundsBtn">Out-of-Bounds</span>
+        <span class="nav-item" id="lostDiscBtn">Lost Disc</span>
+        <span class="nav-item" id="courtesyBtn">Courtesy</span>
+        <span class="nav-item" id="obstablesBtn">Obstacles &amp; Relief</span>
+        <span class="nav-item" id="excessiveBtn">Excessive Time</span>
+        <span class="nav-item" id="optionalBtn">Optional Relief &amp; Optional Re-Throw</span>
+        <span class="nav-item" id="misplayBtn">Misplay</span>
+        <span class="nav-item" id="mandatoriesBtn">Mandatories</span>
+        <span class="nav-item" id="interferenceBtn">Interference</span>
+        <span class="nav-item" id="applicationBtn">Application of the Rules</span>
+        <span class="nav-item" id="provisionalBtn">Provisional Throws</span>
+      </div>
+    </nav>
 
     <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-    <label for="nav-trigger"></label>
+    <label for="nav-trigger" id="nav-trigger-label__menu"></label>
+    <label for="sub-nav-trigger" id="sub-nav-trigger-label__close"></label>
+
 
     <div class="site-wrap">
 
 
-    <section id="basicRulesContent">
-      <h3>Basic Rules of Play</h3>
-      <p>Some text goes here you and read it and it's
-        interesting and helpful to what you are looking for.</p>
-    </section>
+      <section id="basicRulesContent">
+        <h3>Basic Rules of Play</h3>
+        <p>Some text goes here you and read it and it's
+          interesting and helpful to what you are looking for.</p>
+      </section>
 
-    <section id="outOfBoundsContent">
-      <h3>Out-of-Bounds</h3>
-      <p>The rain in Spain stays mainly in the plain.</p>
-    </section>
+      <section id="outOfBoundsContent">
+        <h3>Out-of-Bounds</h3>
+        <section class="ac-container">
+          <div>
+            <input id="ac-1" name="accordion-1" type="checkbox" />
+            <label for="ac-1">About us</label>
+            <article>
+            <p>A disc is out-of-bounds if its position is clearly and completely surrounded by an out-of-bounds area. See 802.02.B for determining when a disc in water or foliage has come to rest.
+            </p>
+            </article>
+          </div>
+        </section>
+      </section>
 
-    <section id="lostDiscContent">
-      <h3>Lost Disc</h3>
-      <p>In Hertford, Hereford and Hampshire, hurricanes hardly
-        ever happen.</p>
-    </section>
+      <section id="lostDiscContent">
+        <h3>Lost Disc</h3>
+        <p>In Hertford, Hereford and Hampshire, hurricanes hardly
+          ever happen.</p>
+      </section>
 
-    <section id="obstablesContent">
-      <h3>Obstacles &amp; Relief</h3>
-      <p>It's your father's fault that curse got placed and the
-        place got cursed in the first place.</p>
-    </section>
+      <section id="courtesyContent">
+        <h3>Courtesy</h3>
+        <p>When a person's personality is personable he shouldn't
+          oughta sit like a lump. It's harder than a matador coercin'
+          a bull to try to get you off of your rump.</p>
+      </section>
 
-    <section id="courtesyContent">
-      <h3>Courtesy</h3>
-      <p>When a person's personality is personable he shouldn't
-        oughta sit like a lump. It's harder than a matador coercin'
-        a bull to try to get you off of your rump.</p>
-    </section>
+      <section id="obstablesContent">
+        <h3>Obstacles And Relief</h3>
+        <p>It's your father's fault that curse got placed and the
+          place got cursed in the first place.</p>
+      </section>
 
-    <section id="optionalContent">
-      <h3>Optional Relif &amp; Optional Re-Throw</h3>
-      <p>For something romantic De Sade is to trenchant and
-        Dickens too frantic. And Stendhal would ruin rhe plan
-        of attack, As there isn't much blue in "The Red and
-        the Black."</p>
-    </section>
+      <section id="optionalContent">
+        <h3>Optional Relief and Optional Re-Throw</h3>
+        <p>For something romantic De Sade is to trenchant and
+          Dickens too frantic. And Stendhal would ruin rhe plan
+          of attack, As there isn't much blue in "The Red and
+          the Black."</p>
+      </section>
 
-    <section id="excessiveContent">
-      <h3>Excessive Time</h3>
-      <p>De Maupassant's candour would cause her dismay.
-        The Brontes are grander, but not very gay. Her taste
-        is much blander I'm sorry to say. But is Hans Christian
-        Andersen ever risque?</p>
-    </section>
+      <section id="excessiveContent">
+        <h3>Excessive Time</h3>
+        <p>De Maupassant's candour would cause her dismay.
+          The Brontes are grander, but not very gay. Her taste
+          is much blander I'm sorry to say. But is Hans Christian
+          Andersen ever risque?</p>
+      </section>
 
-    <section id="misplayContent">
-      <h3>Misplay</h3>
-      <p>She wouldn't... therefore they didn't... So then it
-        wasn't... not unless it... would she? She doesn't...
-        God knows she needn't... therefore it's not.</p>
-    </section>
+      <section id="misplayContent">
+        <h3>Misplay</h3>
+        <p>She wouldn't... therefore they didn't... So then it
+          wasn't... not unless it... would she? She doesn't...
+          God knows she needn't... therefore it's not.</p>
+      </section>
 
-    <section id="mandatoriesContent">
-      <h3>Mandatories</h3>
-      <p>Greens Green and Nothing but green! Parsley, Peppers,
-        Cabbages, and Celery. Asparagus and Watercress and
-        Fiddlefern and Lettuce. He said "Alright!" But it
-        wasn't quite, cause I caught him in the autumn in my
-        garden one night!</p>
-    </section>
+      <section id="mandatoriesContent">
+        <h3>Mandatories</h3>
+        <p>Greens Green and Nothing but green! Parsley, Peppers,
+          Cabbages, and Celery. Asparagus and Watercress and
+          Fiddlefern and Lettuce. He said "Alright!" But it
+          wasn't quite, cause I caught him in the autumn in my
+          garden one night!</p>
+      </section>
 
-    <section id="interferenceContent">
-      <h3>Interference</h3>
-      <p>Rudding through my rutabagga raiding my arugaluga
-        ripping up the Rampion my champion my favorite!</p>
-    </section>
+      <section id="interferenceContent">
+        <h3>Interference</h3>
+        <p>Rudding through my rutabagga raiding my arugaluga
+          ripping up the Rampion my champion my favorite!</p>
+      </section>
 
-    <section id="provisionalContent">
-      <h3>Provisional Throws</h3>
-      <p>So...there's no more fuss and there's no more scenes
-        and my garden thrives! You should see my nectarine! But
-        I'm telling you the same I tell Kings and Queens don't ever
-        ever ever mess around with my greens! Especially the beans!</p>
-    </section>
+      <section id="provisionalContent">
+        <h3>Provisional Throws</h3>
+        <p>So...there's no more fuss and there's no more scenes
+          and my garden thrives! You should see my nectarine! But
+          I'm telling you the same I tell Kings and Queens don't ever
+          ever ever mess around with my greens! Especially the beans!</p>
+      </section>
 
-    <section id="applicationContent">
-      <h3>Application of the Rules</h3>
-      <p>What you do, that's the point: All the rest of it is
-        chatter. If the thing you do is pure in intent, if it's
-        meant, and it's just a little bent, does it matter?</p>
-    </section>
+      <section id="applicationContent">
+        <h3>Application of the Rules</h3>
+        <p>What you do, that's the point: All the rest of it is
+          chatter. If the thing you do is pure in intent, if it's
+          meant, and it's just a little bent, does it matter?</p>
+      </section>
+
+
+      <!-- Basic Rules Sub Menu Content -->
+
+      <section id="descriptionContent">
+        <h3>Description of the Game</h3>
+        <p>Some text goes here you and read it and it's
+          interesting and helpful to what you are looking for.</p>
+      </section>
+
+      <section id="teeingOffContent">
+        <h3>Teeing Off</h3>
+        <p>Some text goes here you and read it and it's
+          interesting and helpful to what you are looking for.</p>
+      </section>
+
+      <section id="EstablishingContent">
+        <h3>Establishing Position</h3>
+        <p>Some text goes here you and read it and it's
+          interesting and helpful to what you are looking for.</p>
+      </section>
+
+      <section id="markingContent">
+        <h3>Marking The Lie</h3>
+        <p>Some text goes here you and read it and it's
+          interesting and helpful to what you are looking for.</p>
+      </section>
+
+      <section id="throwingContent">
+        <h3>Throwing from a Stance</h3>
+        <p>Some text goes here you and read it and it's
+          interesting and helpful to what you are looking for.</p>
+      </section>
+
+      <section id="holingOutContent">
+        <h3>Holing Out</h3>
+        <p>Some text goes here you and read it and it's
+          interesting and helpful to what you are looking for.</p>
+      </section>
+
+      <section id="orderOfPlayContent">
+        <h3>Order of Play</h3>
+        <p>Some text goes here you and read it and it's
+          interesting and helpful to what you are looking for.</p>
+      </section>
+
+      <section id="definitionsContent">
+        <h3>Definitions</h3>
+        <p>Some text goes here you and read it and it's
+          interesting and helpful to what you are looking for.</p>
+      </section>
 
     </div>
-
     <script src="js/hideAndShow.js"></script>
 
   </body>
