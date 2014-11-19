@@ -16,17 +16,17 @@ var navTriggerInput = document.getElementById('nav-trigger');
 var subNavTriggerInput = document.getElementById('sub-nav-trigger');
 
 
-document.getElementsByClassName('close-menu')[1].onclick = function() {
+document.getElementsByClassName('nav-close')[1].onclick = function() {
   navTriggerInput.checked = false;
 }
 
-document.getElementsByClassName('close-menu')[0].onclick = function() {
+document.getElementsByClassName('nav-close')[0].onclick = function() {
   navTriggerInput.checked = false;
 }
 
-// Ensure only main nav is opened everytime hamburger is clicked
+// Nav reset. Ensures only main nav is opened everytime hamburger is clicked
 
-document.getElementById('check-state').addEventListener("click", function() {
+document.getElementById('nav-reset').addEventListener("click", function() {
   if (navTriggerInput.checked === false) {
     subNavTriggerInput.checked = false;
   }
@@ -70,7 +70,7 @@ window.addEventListener("click", function() {
 var basicRulesBtn = document.getElementById('basicRulesBtn');
 var outOfBoundsBtn = document.getElementById('outOfBoundsBtn');
 var lostDiscBtn = document.getElementById('lostDiscBtn');
-var obstablesBtn = document.getElementById('obstablesBtn');
+var obstaclesBtn = document.getElementById('obstaclesBtn');
 var courtesyBtn = document.getElementById('courtesyBtn');
 var optionalBtn = document.getElementById('optionalBtn');
 var excessiveBtn = document.getElementById('excessiveBtn');
@@ -79,6 +79,15 @@ var mandatoriesBtn = document.getElementById('mandatoriesBtn');
 var interferenceBtn = document.getElementById('interferenceBtn');
 var provisionalBtn = document.getElementById('provisionalBtn');
 var applicationBtn = document.getElementById('applicationBtn');
+// Sub nav variables:
+var descriptionBtn = document.getElementById('descriptionBtn');
+var teeingOffBtn = document.getElementById('teeingOffBtn');
+var establishingBtn = document.getElementById('applicationBtn');
+var markingBtn = document.getElementById('establishingBtn');
+var throwingBtn = document.getElementById('throwingBtn');
+var holingOutBtn = document.getElementById('holingOutBtn');
+var orderOfPlayBtn = document.getElementById('orderOfPlayBtn');
+var definitionsBtn = document.getElementById('definitionsBtn');
 
 // Variables of content on the page:
 
@@ -94,7 +103,38 @@ var mandatoriesContent = document.getElementById('mandatoriesContent');
 var interferenceContent = document.getElementById('interferenceContent');
 var provisionalContent = document.getElementById('provisionalContent');
 var applicationContent = document.getElementById('applicationContent');
+// Sub nav variables:
+var descriptionContent = document.getElementById('descriptionContent');
+var teeingOffContent = document.getElementById('teeingOffContent');
+var establishingContent = document.getElementById('EstablishingContent');
+var markingContent = document.getElementById('markingContent');
+var throwingContent = document.getElementById('throwingContent');
+var holingOutContent = document.getElementById('holingOutContent');
+var orderOfPlayContent = document.getElementById('orderOfPlayContent');
+var definitionsContent = document.getElementById('definitionsContent');
 
+function setDisplayNone() {
+  basicRulesContent.style.display = 'none';
+  outOfBoundsContent.style.display = 'none';
+  lostDiscContent.style.display = 'none';
+  obstablesContent.style.display = 'none';
+  courtesyContent.style.display = 'none';
+  optionalContent.style.display = 'none';
+  excessiveContent.style.display = 'none';
+  misplayContent.style.display = 'none';
+  mandatoriesContent.style.display = 'none';
+  interferenceContent.style.display = 'none';
+  provisionalContent.style.display = 'none';
+  applicationContent.style.display = 'none';
+  descriptionContent.style.display = 'none';
+  teeingOffContent.style.display = 'none';
+  establishingContent.style.display = 'none';
+  markingContent.style.display = 'none';
+  throwingContent.style.display = 'none';
+  holingOutContent.style.display = 'none';
+  orderOfPlayContent.style.display = 'none';
+  definitionsContent.style.display = 'none';
+}
 
 
 
@@ -104,182 +144,109 @@ var applicationContent = document.getElementById('applicationContent');
 // Button event listeners:
 
 basicRulesBtn.addEventListener("click", function() {
-  document.getElementById('basicRulesContent').style.display = 'block';
-  document.getElementById('outOfBoundsContent').style.display = 'none';
-  document.getElementById('lostDiscContent').style.display = 'none';
-  document.getElementById('obstablesContent').style.display = 'none';
-  document.getElementById('courtesyContent').style.display = 'none';
-  document.getElementById('optionalContent').style.display = 'none';
-  document.getElementById('excessiveContent').style.display = 'none';
-  document.getElementById('misplayContent').style.display = 'none';
-  document.getElementById('mandatoriesContent').style.display = 'none';
-  document.getElementById('interferenceContent').style.display = 'none';
-  document.getElementById('provisionalContent').style.display = 'none';
-  document.getElementById('applicationContent').style.display = 'none';
+  setDisplayNone();
+  basicRulesContent.style.display = 'block';
 }, false);
 
 outOfBoundsBtn.addEventListener("click", function() {
-  document.getElementById('basicRulesContent').style.display = 'none';
-  document.getElementById('outOfBoundsContent').style.display = 'block';
-  document.getElementById('lostDiscContent').style.display = 'none';
-  document.getElementById('obstablesContent').style.display = 'none';
-  document.getElementById('courtesyContent').style.display = 'none';
-  document.getElementById('optionalContent').style.display = 'none';
-  document.getElementById('excessiveContent').style.display = 'none';
-  document.getElementById('misplayContent').style.display = 'none';
-  document.getElementById('mandatoriesContent').style.display = 'none';
-  document.getElementById('interferenceContent').style.display = 'none';
-  document.getElementById('provisionalContent').style.display = 'none';
-  document.getElementById('applicationContent').style.display = 'none';
+  setDisplayNone();
+  outOfBoundsContent.style.display = 'block';
 }, false);
 
 lostDiscBtn.addEventListener("click", function() {
-  document.getElementById('basicRulesContent').style.display = 'none';
-  document.getElementById('outOfBoundsContent').style.display = 'none';
-  document.getElementById('lostDiscContent').style.display = 'block';
-  document.getElementById('obstablesContent').style.display = 'none';
-  document.getElementById('courtesyContent').style.display = 'none';
-  document.getElementById('optionalContent').style.display = 'none';
-  document.getElementById('excessiveContent').style.display = 'none';
-  document.getElementById('misplayContent').style.display = 'none';
-  document.getElementById('mandatoriesContent').style.display = 'none';
-  document.getElementById('interferenceContent').style.display = 'none';
-  document.getElementById('provisionalContent').style.display = 'none';
-  document.getElementById('applicationContent').style.display = 'none';
+  setDisplayNone();
+  lostDiscContent.style.display = 'block';
 }, false);
 
-obstablesBtn.addEventListener("click", function() {
-  document.getElementById('basicRulesContent').style.display = 'none';
-  document.getElementById('outOfBoundsContent').style.display = 'none';
-  document.getElementById('lostDiscContent').style.display = 'none';
-  document.getElementById('obstablesContent').style.display = 'block';
-  document.getElementById('courtesyContent').style.display = 'none';
-  document.getElementById('optionalContent').style.display = 'none';
-  document.getElementById('excessiveContent').style.display = 'none';
-  document.getElementById('misplayContent').style.display = 'none';
-  document.getElementById('mandatoriesContent').style.display = 'none';
-  document.getElementById('interferenceContent').style.display = 'none';
-  document.getElementById('provisionalContent').style.display = 'none';
-  document.getElementById('applicationContent').style.display = 'none';
+obstaclesBtn.addEventListener("click", function() {
+  setDisplayNone();
+  obstablesContent.style.display = 'block';
 }, false);
 
 courtesyBtn.addEventListener("click", function() {
-  document.getElementById('basicRulesContent').style.display = 'none';
-  document.getElementById('outOfBoundsContent').style.display = 'none';
-  document.getElementById('lostDiscContent').style.display = 'none';
-  document.getElementById('obstablesContent').style.display = 'none';
-  document.getElementById('courtesyContent').style.display = 'block';
-  document.getElementById('optionalContent').style.display = 'none';
-  document.getElementById('excessiveContent').style.display = 'none';
-  document.getElementById('misplayContent').style.display = 'none';
-  document.getElementById('mandatoriesContent').style.display = 'none';
-  document.getElementById('interferenceContent').style.display = 'none';
-  document.getElementById('provisionalContent').style.display = 'none';
-  document.getElementById('applicationContent').style.display = 'none';
+  setDisplayNone();
+  courtesyContent.style.display = 'block';
 }, false);
 
 optionalBtn.addEventListener("click", function() {
-  document.getElementById('basicRulesContent').style.display = 'none';
-  document.getElementById('outOfBoundsContent').style.display = 'none';
-  document.getElementById('lostDiscContent').style.display = 'none';
-  document.getElementById('obstablesContent').style.display = 'none';
-  document.getElementById('courtesyContent').style.display = 'none';
-  document.getElementById('optionalContent').style.display = 'block';
-  document.getElementById('excessiveContent').style.display = 'none';
-  document.getElementById('misplayContent').style.display = 'none';
-  document.getElementById('mandatoriesContent').style.display = 'none';
-  document.getElementById('interferenceContent').style.display = 'none';
-  document.getElementById('provisionalContent').style.display = 'none';
-  document.getElementById('applicationContent').style.display = 'none';
+  setDisplayNone();
+  optionalContent.style.display = 'block';
 }, false);
 
 excessiveBtn.addEventListener("click", function() {
-  document.getElementById('basicRulesContent').style.display = 'none';
-  document.getElementById('outOfBoundsContent').style.display = 'none';
-  document.getElementById('lostDiscContent').style.display = 'none';
-  document.getElementById('obstablesContent').style.display = 'none';
-  document.getElementById('courtesyContent').style.display = 'none';
-  document.getElementById('optionalContent').style.display = 'none';
-  document.getElementById('excessiveContent').style.display = 'block';
-  document.getElementById('misplayContent').style.display = 'none';
-  document.getElementById('mandatoriesContent').style.display = 'none';
-  document.getElementById('interferenceContent').style.display = 'none';
-  document.getElementById('provisionalContent').style.display = 'none';
-  document.getElementById('applicationContent').style.display = 'none';
+  setDisplayNone();
+  excessiveContent.style.display = 'block';
 }, false);
 
 misplayBtn.addEventListener("click", function() {
-  document.getElementById('basicRulesContent').style.display = 'none';
-  document.getElementById('outOfBoundsContent').style.display = 'none';
-  document.getElementById('lostDiscContent').style.display = 'none';
-  document.getElementById('obstablesContent').style.display = 'none';
-  document.getElementById('courtesyContent').style.display = 'none';
-  document.getElementById('optionalContent').style.display = 'none';
-  document.getElementById('excessiveContent').style.display = 'none';
-  document.getElementById('misplayContent').style.display = 'block';
-  document.getElementById('mandatoriesContent').style.display = 'none';
-  document.getElementById('interferenceContent').style.display = 'none';
-  document.getElementById('provisionalContent').style.display = 'none';
-  document.getElementById('applicationContent').style.display = 'none';
+  setDisplayNone();
+  misplayContent.style.display = 'block';
 }, false);
 
 mandatoriesBtn.addEventListener("click", function() {
-  document.getElementById('basicRulesContent').style.display = 'none';
-  document.getElementById('outOfBoundsContent').style.display = 'none';
-  document.getElementById('lostDiscContent').style.display = 'none';
-  document.getElementById('obstablesContent').style.display = 'none';
-  document.getElementById('courtesyContent').style.display = 'none';
-  document.getElementById('optionalContent').style.display = 'none';
-  document.getElementById('excessiveContent').style.display = 'none';
-  document.getElementById('misplayContent').style.display = 'none';
-  document.getElementById('mandatoriesContent').style.display = 'block';
-  document.getElementById('interferenceContent').style.display = 'none';
-  document.getElementById('provisionalContent').style.display = 'none';
-  document.getElementById('applicationContent').style.display = 'none';
+  setDisplayNone();
+  mandatoriesContent.style.display = 'block';
 }, false);
 
 interferenceBtn.addEventListener("click", function() {
-  document.getElementById('basicRulesContent').style.display = 'none';
-  document.getElementById('outOfBoundsContent').style.display = 'none';
-  document.getElementById('lostDiscContent').style.display = 'none';
-  document.getElementById('obstablesContent').style.display = 'none';
-  document.getElementById('courtesyContent').style.display = 'none';
-  document.getElementById('optionalContent').style.display = 'none';
-  document.getElementById('excessiveContent').style.display = 'none';
-  document.getElementById('misplayContent').style.display = 'none';
-  document.getElementById('mandatoriesContent').style.display = 'none';
-  document.getElementById('interferenceContent').style.display = 'block';
-  document.getElementById('provisionalContent').style.display = 'none';
-  document.getElementById('applicationContent').style.display = 'none';
+  setDisplayNone();
+  interferenceContent.style.display = 'block';
 }, false);
 
 provisionalBtn.addEventListener("click", function() {
-  document.getElementById('basicRulesContent').style.display = 'none';
-  document.getElementById('outOfBoundsContent').style.display = 'none';
-  document.getElementById('lostDiscContent').style.display = 'none';
-  document.getElementById('obstablesContent').style.display = 'none';
-  document.getElementById('courtesyContent').style.display = 'none';
-  document.getElementById('optionalContent').style.display = 'none';
-  document.getElementById('excessiveContent').style.display = 'none';
-  document.getElementById('misplayContent').style.display = 'none';
-  document.getElementById('mandatoriesContent').style.display = 'none';
-  document.getElementById('interferenceContent').style.display = 'none';
-  document.getElementById('provisionalContent').style.display = 'block';
-  document.getElementById('applicationContent').style.display = 'none';
+  setDisplayNone();
+  provisionalContent.style.display = 'block';
 }, false);
 
 applicationBtn.addEventListener("click", function() {
-  document.getElementById('basicRulesContent').style.display = 'none';
-  document.getElementById('outOfBoundsContent').style.display = 'none';
-  document.getElementById('lostDiscContent').style.display = 'none';
-  document.getElementById('obstablesContent').style.display = 'none';
-  document.getElementById('courtesyContent').style.display = 'none';
-  document.getElementById('optionalContent').style.display = 'none';
-  document.getElementById('excessiveContent').style.display = 'none';
-  document.getElementById('misplayContent').style.display = 'none';
-  document.getElementById('mandatoriesContent').style.display = 'none';
-  document.getElementById('interferenceContent').style.display = 'none';
-  document.getElementById('provisionalContent').style.display = 'none';
-  document.getElementById('applicationContent').style.display = 'block';
+  setDisplayNone();
+  applicationContent.style.display = 'block';
 }, false);
+
+
+// Sub nav hide/show content
+
+descriptionBtn.addEventListener("click", function() {
+  setDisplayNone();
+  descriptionContent.style.display = 'block';
+}, false);
+
+teeingOffBtn.addEventListener("click", function() {
+  setDisplayNone();
+  teeingOffContent.style.display = 'block';
+}, false);
+
+establishingBtn.addEventListener("click", function() {
+  setDisplayNone();
+  establishingContent.style.display = 'block';
+}, false);
+
+markingBtn.addEventListener("click", function() {
+  setDisplayNone();
+  markingContent.style.display = 'block';
+}, false);
+
+throwingBtn.addEventListener("click", function() {
+  setDisplayNone();
+  throwingContent.style.display = 'block';
+}, false);
+
+holingOutBtn.addEventListener("click", function() {
+  setDisplayNone();
+  holingOutContent.style.display = 'block';
+}, false);
+
+orderOfPlayBtn.addEventListener("click", function() {
+  setDisplayNone();
+  orderOfPlayContent.style.display = 'block';
+}, false);
+
+definitionsBtn.addEventListener("click", function() {
+  setDisplayNone();
+  definitionsContent.style.display = 'block';
+}, false);
+
+
+
+
 

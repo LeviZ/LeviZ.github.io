@@ -5,200 +5,167 @@
       CSS Nav Hamburger, with JavaScript Hide and Show
     </title>
 
+    <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="css/cssversion.css">
     <link rel="stylesheet" type="text/css" href="css/font.css">
-    <link rel="stylesheet" type="text/css" href="css/accordian.css">
+    <link rel="stylesheet" type="text/css" thref="css/accordian.css">
 
   </head>
   <body>
 
-    <nav class="sub-navigation">
-      <img src="imgs/placeholder.svg">
-      <header></header>
-      <div class="close-menu" id="check-state">
-        <span class="sub-nav-item">Description of the Game</span>
-        <span class="sub-nav-item">Teeing Off</span>
-        <span class="sub-nav-item">Establishing Position</span>
-        <span class="sub-nav-item">Marking The Lie</span>
-        <span class="sub-nav-item">Throwing from a Stance</span>
-        <span class="sub-nav-item">Holing Out</span>
-        <span class="sub-nav-item">Order Of Play</span>
-        <span class="sub-nav-item">Definitions</span>
-      </div>
+    <nav class="sub-nav">
+      <header><img src="imgs/placeholder.svg" class="logo"></header>
+      <section class="nav-close" id="nav-reset">
+        <button class="sub-nav-item" id="descriptionBtn">Description of the Game</button>
+        <button class="sub-nav-item" id="teeingOffBtn">Teeing Off</button>
+        <button class="sub-nav-item" id="establishingBtn">Establishing Position</button>
+        <button class="sub-nav-item" id="markingBtn">Marking The Lie</button>
+        <button class="sub-nav-item" id="throwingBtn">Throwing from a Stance</button>
+        <button class="sub-nav-item" id="holingOutBtn">Holing Out</button>
+        <button class="sub-nav-item" id="orderOfPlayBtn">Order Of Play</button>
+        <button class="sub-nav-item" id="definitionsBtn">Definitions</button>
+      </section>
     </nav>
 
     <input type="checkbox" id="sub-nav-trigger" class="sub-nav-trigger" />
 
-    <nav class="navigation">
+    <nav class="nav">
       <header></header>
-      <label for="sub-nav-trigger"><span class="nav-item" id="basicRulesBtn">Basic Rules</span></label>
-      <div class="close-menu">
-        <span class="nav-item" id="outOfBoundsBtn">Out-of-Bounds</span>
-        <span class="nav-item" id="lostDiscBtn">Lost Disc</span>
-        <span class="nav-item" id="courtesyBtn">Courtesy</span>
-        <span class="nav-item" id="obstablesBtn">Obstacles &amp; Relief</span>
-        <span class="nav-item" id="excessiveBtn">Excessive Time</span>
-        <span class="nav-item" id="optionalBtn">Optional Relief &amp; Optional Re-Throw</span>
-        <span class="nav-item" id="misplayBtn">Misplay</span>
-        <span class="nav-item" id="mandatoriesBtn">Mandatories</span>
-        <span class="nav-item" id="interferenceBtn">Interference</span>
-        <span class="nav-item" id="applicationBtn">Application of the Rules</span>
-        <span class="nav-item" id="provisionalBtn">Provisional Throws</span>
-      </div>
+      <label for="sub-nav-trigger"><span class="nav-item" id="basicRulesBtn" role="button">Basic Rules</span></label>
+      <section class="nav-close">
+        <button class="nav-item" id="outOfBoundsBtn">Out-of-Bounds</button>
+        <button class="nav-item" id="lostDiscBtn">Lost Disc</button>
+        <button class="nav-item" id="courtesyBtn">Courtesy</button>
+        <button class="nav-item" id="obstaclesBtn">Obstacles &amp; Relief</button>
+        <button class="nav-item" id="excessiveBtn">Excessive Time</button>
+        <button class="nav-item" id="optionalBtn">Optional Relief &amp; Optional Re-Throw</button>
+        <button class="nav-item" id="misplayBtn">Misplay</button>
+        <button class="nav-item" id="mandatoriesBtn">Mandatories</button>
+        <button class="nav-item" id="interferenceBtn">Interference</button>
+        <button class="nav-item" id="applicationBtn">Application of the Rules</button>
+        <button class="nav-item" id="provisionalBtn">Provisional Throws</button>
+      </section>
     </nav>
 
     <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-    <label for="nav-trigger" id="nav-trigger-label__menu"></label>
+    <label for="nav-trigger" id="nav-trigger-label__open"></label>
     <label for="sub-nav-trigger" id="sub-nav-trigger-label__close"></label>
 
 
-    <div class="site-wrap">
+    <section class="site-wrap">
 
 
       <section id="basicRulesContent">
-        <h3>Basic Rules of Play</h3>
-        <p>Some text goes here you and read it and it's
-          interesting and helpful to what you are looking for.</p>
+        <h1>Basic Rules of Play</h1>
       </section>
 
       <section id="outOfBoundsContent">
-        <h3>Out-of-Bounds</h3>
+        <h1>Out-of-Bounds</h1>
         <section class="ac-container">
-          <div>
-            <input id="ac-1" name="accordion-1" type="checkbox" />
-            <label for="ac-1">About us</label>
-            <article>
-            <p>A disc is out-of-bounds if its position is clearly and completely surrounded by an out-of-bounds area. See 802.02.B for determining when a disc in water or foliage has come to rest.
-            </p>
-            </article>
-          </div>
+          <article>
+            <input id="out-a" name="accordion-1" type="checkbox" />
+            <label for="out-a">A. A disc is out-of-bounds when</label>
+            <section class="ac-medium">
+              <p>A disc is out-of-bounds if its position is clearly and completely surrounded by an out-of-bounds area. See 802.02.B for determining when a disc in water or foliage has come to rest.
+              </p>
+            </section>
+          </article>
+          <article>
+            <input id="out-b" name="accordion-1" type="checkbox" />
+            <label for="out-b">B. The OB line is part of the OB area</label>
+            <section class="ac-medium">
+              <p>The out-of-bounds line is part of the out-of-bounds area.
+              </p>
+            </section>
+          </article>
+          <article>
+            <input id="out-c" name="accordion-1" type="checkbox" />
+            <label for="out-c">B. The OB line is part of the OB area</label>
+            <section class="ac-medium">
+              <p>The out-of-bounds line is part of the out-of-bounds area.
+              </p>
+            </section>
+          </article>
         </section>
       </section>
 
       <section id="lostDiscContent">
-        <h3>Lost Disc</h3>
-        <p>In Hertford, Hereford and Hampshire, hurricanes hardly
-          ever happen.</p>
+        <h1>Lost Disc</h1>
       </section>
 
       <section id="courtesyContent">
-        <h3>Courtesy</h3>
-        <p>When a person's personality is personable he shouldn't
-          oughta sit like a lump. It's harder than a matador coercin'
-          a bull to try to get you off of your rump.</p>
+        <h1>Courtesy</h1>
       </section>
 
       <section id="obstablesContent">
-        <h3>Obstacles And Relief</h3>
-        <p>It's your father's fault that curse got placed and the
-          place got cursed in the first place.</p>
+        <h1>Obstacles And Relief</h1>
       </section>
 
       <section id="optionalContent">
-        <h3>Optional Relief and Optional Re-Throw</h3>
-        <p>For something romantic De Sade is to trenchant and
-          Dickens too frantic. And Stendhal would ruin rhe plan
-          of attack, As there isn't much blue in "The Red and
-          the Black."</p>
+        <h1>Optional Relief and Optional Re-Throw</h1>
       </section>
 
       <section id="excessiveContent">
-        <h3>Excessive Time</h3>
-        <p>De Maupassant's candour would cause her dismay.
-          The Brontes are grander, but not very gay. Her taste
-          is much blander I'm sorry to say. But is Hans Christian
-          Andersen ever risque?</p>
+        <h1>Excessive Time</h1>
       </section>
 
       <section id="misplayContent">
-        <h3>Misplay</h3>
-        <p>She wouldn't... therefore they didn't... So then it
-          wasn't... not unless it... would she? She doesn't...
-          God knows she needn't... therefore it's not.</p>
+        <h1>Misplay</h1>
       </section>
 
       <section id="mandatoriesContent">
-        <h3>Mandatories</h3>
-        <p>Greens Green and Nothing but green! Parsley, Peppers,
-          Cabbages, and Celery. Asparagus and Watercress and
-          Fiddlefern and Lettuce. He said "Alright!" But it
-          wasn't quite, cause I caught him in the autumn in my
-          garden one night!</p>
+        <h1>Mandatories</h1>
       </section>
 
       <section id="interferenceContent">
-        <h3>Interference</h3>
-        <p>Rudding through my rutabagga raiding my arugaluga
-          ripping up the Rampion my champion my favorite!</p>
+        <h1>Interference</h1>
       </section>
 
       <section id="provisionalContent">
-        <h3>Provisional Throws</h3>
-        <p>So...there's no more fuss and there's no more scenes
-          and my garden thrives! You should see my nectarine! But
-          I'm telling you the same I tell Kings and Queens don't ever
-          ever ever mess around with my greens! Especially the beans!</p>
+        <h1>Provisional Throws</h1>
       </section>
 
       <section id="applicationContent">
-        <h3>Application of the Rules</h3>
-        <p>What you do, that's the point: All the rest of it is
-          chatter. If the thing you do is pure in intent, if it's
-          meant, and it's just a little bent, does it matter?</p>
+        <h1>Application of the Rules</h1>
       </section>
+
 
 
       <!-- Basic Rules Sub Menu Content -->
 
       <section id="descriptionContent">
-        <h3>Description of the Game</h3>
-        <p>Some text goes here you and read it and it's
-          interesting and helpful to what you are looking for.</p>
+        <h1>Description of the Game</h1>
       </section>
 
       <section id="teeingOffContent">
-        <h3>Teeing Off</h3>
-        <p>Some text goes here you and read it and it's
-          interesting and helpful to what you are looking for.</p>
+        <h1>Teeing Off</h1>
       </section>
 
       <section id="EstablishingContent">
-        <h3>Establishing Position</h3>
-        <p>Some text goes here you and read it and it's
-          interesting and helpful to what you are looking for.</p>
+        <h1>Establishing Position</h1>
       </section>
 
       <section id="markingContent">
-        <h3>Marking The Lie</h3>
-        <p>Some text goes here you and read it and it's
-          interesting and helpful to what you are looking for.</p>
+        <h1>Marking The Lie</h1>
       </section>
 
       <section id="throwingContent">
-        <h3>Throwing from a Stance</h3>
-        <p>Some text goes here you and read it and it's
-          interesting and helpful to what you are looking for.</p>
+        <h1>Throwing from a Stance</h1>
       </section>
 
       <section id="holingOutContent">
-        <h3>Holing Out</h3>
-        <p>Some text goes here you and read it and it's
-          interesting and helpful to what you are looking for.</p>
+        <h1>Holing Out</h1>
       </section>
 
       <section id="orderOfPlayContent">
-        <h3>Order of Play</h3>
-        <p>Some text goes here you and read it and it's
-          interesting and helpful to what you are looking for.</p>
+        <h1>Order of Play</h1>
       </section>
 
       <section id="definitionsContent">
-        <h3>Definitions</h3>
-        <p>Some text goes here you and read it and it's
-          interesting and helpful to what you are looking for.</p>
+        <h1>Definitions</h1>
       </section>
 
-    </div>
+    </section>
     <script src="js/hideAndShow.js"></script>
 
   </body>
