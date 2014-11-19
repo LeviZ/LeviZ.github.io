@@ -56,7 +56,7 @@
 .ac-container input{
 	display: none;
 }
-.ac-container section{
+.ac-container article{
 	background: rgba(255, 255, 255, 0.5);
 	margin-top: -1px;
 	overflow: hidden;
@@ -69,7 +69,7 @@
 	-ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
 	transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
 }
-.ac-container section p{
+.ac-container article p{
 	font-style: italic;
 	color: #777;
 	line-height: 23px;
@@ -77,7 +77,7 @@
 	padding: 20px;
 	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
 }
-.ac-container input:checked ~ section{
+.ac-container input:checked ~ article{
 	-webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
 	-moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
 	-o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
@@ -85,12 +85,12 @@
 	transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
 	box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
 }
-.ac-container input:checked ~ section.ac-small{
+.ac-container input:checked ~ article.ac-small{
 	height: 140px;
 }
-.ac-container input:checked ~ section.ac-medium{
+.ac-container input:checked ~ article.ac-medium{
 	height: 180px;
 }
-.ac-container input:checked ~ section.ac-large{
+.ac-container input:checked ~ article.ac-large{
 	height: 230px;
 }

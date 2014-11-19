@@ -8,8 +8,6 @@ window.onload = function() {
 };
 
 
-
-
 // Close/Open menu on nav selection
 
 var navTriggerInput = document.getElementById('nav-trigger');
@@ -82,8 +80,8 @@ var applicationBtn = document.getElementById('applicationBtn');
 // Sub nav variables:
 var descriptionBtn = document.getElementById('descriptionBtn');
 var teeingOffBtn = document.getElementById('teeingOffBtn');
-var establishingBtn = document.getElementById('applicationBtn');
-var markingBtn = document.getElementById('establishingBtn');
+var establishingBtn = document.getElementById('establishingBtn');
+var markingBtn = document.getElementById('markingBtn');
 var throwingBtn = document.getElementById('throwingBtn');
 var holingOutBtn = document.getElementById('holingOutBtn');
 var orderOfPlayBtn = document.getElementById('orderOfPlayBtn');
@@ -117,7 +115,7 @@ function setDisplayNone() {
   basicRulesContent.style.display = 'none';
   outOfBoundsContent.style.display = 'none';
   lostDiscContent.style.display = 'none';
-  obstablesContent.style.display = 'none';
+  obstaclesContent.style.display = 'none';
   courtesyContent.style.display = 'none';
   optionalContent.style.display = 'none';
   excessiveContent.style.display = 'none';
@@ -160,7 +158,7 @@ lostDiscBtn.addEventListener("click", function() {
 
 obstaclesBtn.addEventListener("click", function() {
   setDisplayNone();
-  obstablesContent.style.display = 'block';
+  obstaclesContent.style.display = 'block';
 }, false);
 
 courtesyBtn.addEventListener("click", function() {
