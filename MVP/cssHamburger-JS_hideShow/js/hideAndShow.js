@@ -1,18 +1,9 @@
-// Opening page state:
-
-window.onload = function() {
-  setTimeout(function(){
-    document.getElementById('nav-trigger').checked = true;
-  }, 2000);
-  closeLabel.style.display = 'none';
-};
 
 
 // Close/Open menu on nav selection
 
 var navTriggerInput = document.getElementById('nav-trigger');
 var subNavTriggerInput = document.getElementById('sub-nav-trigger');
-
 
 document.getElementsByClassName('nav-close')[1].onclick = function() {
   navTriggerInput.checked = false;
@@ -21,6 +12,7 @@ document.getElementsByClassName('nav-close')[1].onclick = function() {
 document.getElementsByClassName('nav-close')[0].onclick = function() {
   navTriggerInput.checked = false;
 }
+
 
 // Nav reset. Ensures only main nav is opened everytime hamburger is clicked
 
@@ -31,28 +23,9 @@ document.getElementById('nav-reset').addEventListener("click", function() {
 });
 
 
-// Setting page content to not display on page load
+// Hide/show sub nav checkbox label
 
-// window.onload = function() {
-//   document.getElementById('logo').style.display = 'block';
-//   document.getElementById('basicRulesContent').style.display = 'none';
-//   document.getElementById('outOfBoundsContent').style.display = 'none';
-//   document.getElementById('lostDiscContent').style.display = 'none';
-//   document.getElementById('obstablesContent').style.display = 'none';
-//   document.getElementById('courtesyContent').style.display = 'none';
-//   document.getElementById('optionalContent').style.display = 'none';
-//   document.getElementById('excessiveContent').style.display = 'none';
-//   document.getElementById('misplayContent').style.display = 'none';
-//   document.getElementById('mandatoriesContent').style.display = 'none';
-//   document.getElementById('interferenceContent').style.display = 'none';
-//   document.getElementById('provisionalContent').style.display = 'none';
-//   document.getElementById('applicationContent').style.display = 'none';
-// };
-
-
-// Hide/show checkbox labels
-
-var menuLabel = document.getElementById('nav-trigger-label__menu');
+var menuLabel = document.getElementById('nav-trigger-label__open');
 var closeLabel = document.getElementById('sub-nav-trigger-label__close');
 
 window.addEventListener("click", function() {
@@ -62,6 +35,7 @@ window.addEventListener("click", function() {
     closeLabel.style.display = 'none';
   }
 });
+
 
 // Variables of buttons on the page:
 
@@ -87,12 +61,13 @@ var holingOutBtn = document.getElementById('holingOutBtn');
 var orderOfPlayBtn = document.getElementById('orderOfPlayBtn');
 var definitionsBtn = document.getElementById('definitionsBtn');
 
+
 // Variables of content on the page:
 
 var basicRulesContent = document.getElementById('basicRulesContent');
 var outOfBoundsContent = document.getElementById('outOfBoundsContent');
 var lostDiscContent = document.getElementById('lostDiscContent');
-var obstablesContent = document.getElementById('obstablesContent');
+var obstablesContent = document.getElementById('obstaclesContent');
 var courtesyContent = document.getElementById('courtesyContent');
 var optionalContent = document.getElementById('optionalContent');
 var excessiveContent = document.getElementById('excessiveContent');
@@ -104,7 +79,7 @@ var applicationContent = document.getElementById('applicationContent');
 // Sub nav variables:
 var descriptionContent = document.getElementById('descriptionContent');
 var teeingOffContent = document.getElementById('teeingOffContent');
-var establishingContent = document.getElementById('EstablishingContent');
+var establishingContent = document.getElementById('establishingContent');
 var markingContent = document.getElementById('markingContent');
 var throwingContent = document.getElementById('throwingContent');
 var holingOutContent = document.getElementById('holingOutContent');
@@ -133,10 +108,6 @@ function setDisplayNone() {
   orderOfPlayContent.style.display = 'none';
   definitionsContent.style.display = 'none';
 }
-
-
-
-
 
 
 // Button event listeners:
@@ -245,6 +216,15 @@ definitionsBtn.addEventListener("click", function() {
 }, false);
 
 
+// Opening page state:
+
+window.onload = function() {
+  setTimeout(function(){
+    document.getElementById('nav-trigger').checked = true;
+  }, 2000);
+  closeLabel.style.display = 'none';
+  setDisplayNone();
+};
 
 
 
