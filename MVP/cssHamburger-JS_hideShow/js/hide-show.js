@@ -49,7 +49,7 @@ var orderOfPlayContent = document.getElementById('orderOfPlayContent');
 var definitionsContent = document.getElementById('definitionsContent');
 
 function setDisplayNone() {
-  basicRulesContent.style.display = 'none';
+  // basicRulesContent.style.display = 'none';
   outOfBoundsContent.style.display = 'none';
   lostDiscContent.style.display = 'none';
   obstaclesContent.style.display = 'none';
@@ -74,10 +74,10 @@ function setDisplayNone() {
 
 // Button event listeners:
 
-basicRulesBtn.addEventListener("click", function() {
-  setDisplayNone();
-  basicRulesContent.style.display = 'block';
-}, false);
+// basicRulesBtn.addEventListener("click", function() {
+//   setDisplayNone();
+//   basicRulesContent.style.display = 'block';
+// }, false);
 
 outOfBoundsBtn.addEventListener("click", function() {
   setDisplayNone();

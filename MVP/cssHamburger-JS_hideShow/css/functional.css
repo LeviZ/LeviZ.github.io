@@ -30,5 +30,5 @@
 
 /* Slide main navigation */
 .sub-nav-trigger:checked ~ .nav {
-  left: 65%;
+  left: 70%;
 }
