@@ -46,6 +46,12 @@
   background-color: #2FB8AC;
 }
 
+.header-main {
+  height: 5%;
+  background-color: white;
+  position: fixed;
+}
+
 
 
 

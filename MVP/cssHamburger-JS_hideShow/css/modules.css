@@ -57,7 +57,7 @@
   background-size: contain;
   height: 40px;
   width: 40px;
-  position: absolute;
+  /*position: absolute;*/
 }
     /*Hamburger*/
 #nav-trigger-label__open {
@@ -79,7 +79,7 @@ vertical-align: center;
 z-index: 2;
 }
 
-/******* Logo Module *******/
+/******* Small Logo Module *******/
 
 .nav-logo {
 display:flex;
@@ -94,6 +94,16 @@ vertical-align: center;
 padding-left: 5%;
 }
 
+/******* LARGE LOGO MODULE *******/
+
+.logo-landing {
+width:90%;
+height: 100%;
+}
+
+.logo-landing img {
+min-height: calc(100% - 300px);
+}
 
 /*Accordian Module*/
 
