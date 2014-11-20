@@ -1,0 +1,34 @@
+
+
+/* Hide nav input checkboxes */
+.nav-trigger {
+  /* critical styles - hide the checkbox input */
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+.sub-nav-trigger {
+  /* critical styles - hide the checkbox input */
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* Make some moving parts smooth */
+.nav-trigger + label, .site-wrap, .nav, #nav-trigger-label__open {
+  transition: left 0.2s;
+}
+
+/* Slide main content page */
+.nav-trigger:checked ~ .site-wrap {
+  left: 75%;
+}
+
+/* Slide hamburger label */
+.nav-trigger:checked + #nav-trigger-label__open {
+  left: 80%;
+}
+
+/* Slide main navigation */
+.sub-nav-trigger:checked ~ .nav {
+  left: 65%;
+}
