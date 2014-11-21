@@ -42,10 +42,11 @@
   font-style: bold;
   text-align: center;
   letter-spacing: 1px;
+  background-color: #2FB8AC;
 }
 
-#basicRulesBtn:active {
-  background-color: #2FB8AC;
+#basicRulesBtn:active, #basicRulesBtn:hover {
+  background-color: #309292;
 }
 
 /*Checkbox label module*/
@@ -61,7 +62,7 @@
 }
     /*Hamburger*/
 #nav-trigger-label__open {
-  left: 15px; top: 22px;
+  left: 15px; top: 15px;
   z-index: 3;
   background-image: url("../imgs/menu.svg");
 }
