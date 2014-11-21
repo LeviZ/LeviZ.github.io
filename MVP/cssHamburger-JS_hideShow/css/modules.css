@@ -181,7 +181,8 @@ min-height: calc(100% - 300px);
 
 /*ADDED CLASSES to OL AND LI*/
 .sub-detail {
-  padding-left: 6em;
+  padding-left: 3em;
+  padding-top: 1em;
 }
 
 .ac-small li {
