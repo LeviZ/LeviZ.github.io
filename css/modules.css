@@ -1,0 +1,202 @@
+
+/*Nav-item Module*/
+
+.nav-item, .sub-nav-item {
+  display: block;
+  padding: 1em;
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: color 0.2s, background 0.5s;
+  border-bottom: 1px solid #309292;
+}
+
+.nav-item {
+  /* non-critical appearance styles */
+  width:80%;
+  background-color: rgba(41, 128, 185,1.0);
+}
+
+.nav-item:hover,
+.nav-item:active {
+  background-color: #309292;
+}
+
+.sub-nav-item {
+  /* non-critical appearance styles */
+  width: 70%;
+  background-color: #2FB8AC;
+}
+
+.sub-nav-item:hover,
+.sub-nav-item:active {
+  background-color: #309292;
+}
+
+
+/******* Specific button colors *******/
+
+#basicRulesBtn {
+  font-family: 'Roboto Slab';
+  font-style: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  background-color: #2FB8AC;
+}
+
+#basicRulesBtn:active, #basicRulesBtn:hover {
+  background-color: #309292;
+}
+
+#basicRulesBtn span {
+    color: white;
+}
+
+/*Checkbox label module*/
+
+#nav-trigger-label__open, #sub-nav-trigger-label__close {
+  position: fixed;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+  /*position: absolute;*/
+}
+    /*Hamburger*/
+#nav-trigger-label__open {
+  left: 15px; top: 15px;
+  z-index: 3;
+  background-image: url("../imgs/menu.svg");
+}
+    /*Cancel-circle*/
+ #sub-nav-trigger-label__close {
+  left: 2%;
+  top: 4.2%;
+  z-index: 2;
+  background-color: transparent;
+}
+
+.subnav-close-icon {
+width: 90%;
+vertical-align: center;
+z-index: 2;
+}
+
+/******* Small Logo Module *******/
+
+.nav-header img {
+width:75%;
+vertical-align: center;
+padding-left: 5%;
+}
+
+/******* LARGE LOGO MODULE *******/
+
+
+
+.logo-large {
+margin: 50% auto 0;
+}
+
+/*Accordian Module*/
+
+/*need JS to make plus/minus animate change class*/
+.sub-icon {
+  color: gray;
+  font-size: 1em;
+  padding-right: 10px;
+}
+
+.ac-small p {
+  font-family: 'Roboto';
+  font-weight: normal;
+  color: black;
+  letter-spacing: 1px;
+  font-size: 1em;
+  padding-left: 20px;
+}
+
+.accordian {
+  padding-bottom:5%;
+}
+
+.accordian label{
+  padding: 3% 0;
+  padding-left: 10%;
+  position: relative;
+  /*z-index: 20;*/
+  margin: auto;
+  padding-left: 5%;
+  display: block;
+  cursor: pointer;
+  color: #046D8B;
+  line-height: auto;
+  font-size: 1em;
+  }
+
+.accordian label:hover:after,
+.accordian input:checked + label:hover:after {
+  content: '';
+  font-style: bold;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 13px;
+  top: 7px;
+}
+
+.accordian-header {
+  padding-left: none;
+  letter-spacing: none;
+}
+
+.accordian-header:active,
+.accordian-header:hover {
+  color:#309292;
+}
+
+.accordian input{
+  display: none;
+}
+
+.accordian article{
+  margin-top: -1px;
+  overflow: hidden;
+  height: 0px;
+  position: relative;
+  /*z-index: 10;*/
+  -webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+  -moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+  -o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+  -ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+  transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+}
+
+/*ADDED CLASSES to OL AND LI*/
+.sub-detail {
+  padding-left: 3em;
+  padding-top: 1em;
+}
+
+.ac-small li {
+  list-style: upper-roman;
+  letter-spacing: 1px;
+  padding-bottom:1em;
+}
+
+/*ACCORDIAN FUNCTIONS*/
+.accordian input:checked ~ article{
+  -webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+  -moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+  -o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+  -ms-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+  transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+  padding-bottom: 5%;
+}
+
+.accordian input:checked ~ article.ac-small{
+  height: auto;
+  padding: 1%;
+}
