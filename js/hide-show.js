@@ -1,3 +1,5 @@
+// Main page load button event listener:
+var mainPageEntry = document.getElementById('mainPageEntry');
 
 // Variables of buttons on the page:
 
@@ -70,8 +72,12 @@ function setDisplayNone() {
   definitionsContent.style.display = 'none';
 }
 
+window.addEventListener("click", function() {
+  mainPageEntry.style.display = 'none';
+}, false);
 
-// Button event listeners:
+
+// Content load button event listeners:
 
 outOfBoundsBtn.addEventListener("click", function() {
   setDisplayNone();
