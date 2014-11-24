@@ -19,15 +19,15 @@ The second file structure option, breaks up the site into smaller pages that are
 
 ###Who did what:
 **Levi:**
-Information Architecture
-CSS Hamburger Menu
-User Research
+* Information Architecture
+* CSS Hamburger Menu
+* User Research
 
 **Loann:**
-CSS
-Graphic Design
+* CSS
+* Graphic Design
 
 **Sheyna:**
-JavaScript of Ajax framework
-JavaScript of hide/show framework
-HTML of internal content
+* JavaScript of Ajax framework
+* JavaScript of hide/show framework
+* HTML of internal content
