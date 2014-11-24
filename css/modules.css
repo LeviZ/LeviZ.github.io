@@ -37,8 +37,14 @@
 
 /******* INDEXED BUTTON MODULE *******/
 
-#basicRulesBtn span {
+#basicRulesBtn {
     color: white;
+}
+
+.indexed-btn {
+    font-family: 'Roboto Slab';
+    font-style: bold;
+    font-size: 1.2em;
 }
 
 /******* CHECKBOX LABEL MODULE *******/
