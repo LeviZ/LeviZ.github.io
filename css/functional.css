@@ -15,20 +15,21 @@
 
 /* Make some moving parts smooth */
 .nav-trigger + label, .site-wrap, .nav, #nav-trigger-label__open {
-  transition: left 0.2s;
+  transition: transform 0.2s;
 }
 
 /* Slide main content page */
 .nav-trigger:checked ~ .site-wrap {
-  left: 75%;
+  transform: translatex(75%);
 }
 
 /* Slide hamburger label */
 .nav-trigger:checked + #nav-trigger-label__open {
-  left: 80%;
+  transform: translatex(2350%);
 }
 
 /* Slide main navigation */
 .sub-nav-trigger:checked ~ .nav {
-  left: 70%;
+  transform: translatex(70%);
 }
+
