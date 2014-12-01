@@ -51,3 +51,8 @@
   margin: 0 -1em;
 }
 
+// Don't allow x axis scroll
+
+html {
+  overflow-x: hidden;
+}

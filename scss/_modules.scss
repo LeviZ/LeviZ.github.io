@@ -46,13 +46,20 @@
     font-size: 1.2em;
 }
 
+.indexed-btn {
+  img {
+    width: 3.5em;
+    margin-bottom: -.5em;
+    margin-left: -4em;
+  }
+}
+
 /******* CHECKBOX LABEL MODULE *******/
 
 #nav-trigger-label__open, #sub-nav-trigger-label__close {
   position: absolute;
   cursor: pointer;
   background-repeat: no-repeat;
-  background-size: contain;
   height: 40px;
   width: 40px;
 }
