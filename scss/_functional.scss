@@ -15,8 +15,8 @@
 
 /* Make some moving parts smooth */
 .nav-trigger + label, .site-wrap, .nav, #nav-trigger-label__open {
-  // transition: transform 0.2s;
-  // -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+  -webkit-transition: -webkit-transform 0.2s;
 }
 
 /* Slide main content page */

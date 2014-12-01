@@ -10,6 +10,10 @@
   clip: rect(0, 0, 0, 0); }
 
 /* Make some moving parts smooth */
+.nav-trigger + label, .site-wrap, .nav, #nav-trigger-label__open {
+  transition: transform 0.2s;
+  -webkit-transition: -webkit-transform 0.2s; }
+
 /* Slide main content page */
 .nav-trigger:checked ~ .site-wrap {
   transform: translatex(75%);
