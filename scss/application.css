@@ -1,0 +1,275 @@
+/* Hide nav input checkboxes */
+.nav-trigger {
+  /* critical styles - hide the checkbox input */
+  position: absolute;
+  clip: rect(0, 0, 0, 0); }
+
+.sub-nav-trigger {
+  /* critical styles - hide the checkbox input */
+  position: absolute;
+  clip: rect(0, 0, 0, 0); }
+
+/* Make some moving parts smooth */
+/* Slide main content page */
+.nav-trigger:checked ~ .site-wrap {
+  transform: translatex(75%);
+  -webkit-transform: translatex(75%); }
+
+/* Slide hamburger label */
+.nav-trigger:checked + #nav-trigger-label__open {
+  left: 80%; }
+
+/* Slide main navigation */
+.sub-nav-trigger:checked ~ .nav {
+  transform: translatex(70%);
+  -webkit-transform: translatex(70%); }
+
+/******* Base *******/
+body {
+  /* Without this, the body has excess horizontal scroll when the menu is open */
+  overflow-x: hidden;
+  color: #000;
+  font-family: 'Roboto', sans-serif, 'Roboto Slab',serif, "Arial";
+  margin: 0;
+  padding: 0; }
+
+h1, .h1 {
+  font-family: 'Roboto Slab';
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #046D8B; }
+
+h2, .h2 {
+  font-family: 'Roboto Slab';
+  font-weight: normal;
+  font-size: 1.2em;
+  color: #309292; }
+
+h3, .h3 {
+  font-family: 'Roboto Slab';
+  font-weight: normal;
+  font-size: 1em;
+  color: gray; }
+
+button {
+  font-family: 'Roboto Slab';
+  font-style: bold;
+  border: none; }
+
+/* Micro reset */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Helvetica, Arial, sans-serif; }
+
+/******** MAIN CONTENT PAGE **********/
+.site-wrap {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: white;
+  /* Needs a background or else the nav will show through */
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 2;
+  padding: 0 1em;
+  background-size: 100%;
+  overflow-x: hidden; }
+
+/******** MAIN NAVIGATION **********/
+.nav {
+  /* critical styles */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  overflow-y: auto;
+  background-color: #046D8B; }
+
+/******** SUB NAVIGATION **********/
+.sub-nav {
+  /* critical styles */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  overflow-y: auto;
+  background-color: #2FB8AC; }
+
+/******** HEADERS **********/
+.nav-header {
+  display: -webkit-flex;
+  display: -moz-flex;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  background-color: #064780;
+  height: 70px; }
+
+/* header-main will exist if compatability with safari is accomplished*/
+/*.header-main {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  position: fixed;
+}*/
+/******** MAIN PAGE ENTRY MODULE **********/
+.main-page-entry {
+  padding: 5% 15% 0; }
+
+/******** MAIN PAGE CONTENT MODULE **********/
+.content-position {
+  padding-top: 50px; }
+
+/*Nav-item Module*/
+.nav-item, .sub-nav-item {
+  display: block;
+  padding: 1em;
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #309292; }
+
+.nav-item {
+  /* non-critical appearance styles */
+  width: 80%;
+  background-color: #2980b9; }
+
+.nav-item:hover,
+.nav-item:active {
+  background-color: #309292; }
+
+.sub-nav-item {
+  /* non-critical appearance styles */
+  width: 70%;
+  background-color: #2FB8AC; }
+
+.sub-nav-item:hover,
+.sub-nav-item:active {
+  background-color: #309292; }
+
+/******* INDEXED BUTTON MODULE *******/
+#basicRulesBtn {
+  color: white; }
+
+.indexed-btn {
+  font-family: 'Roboto Slab';
+  font-style: bold;
+  font-size: 1.2em; }
+
+/******* CHECKBOX LABEL MODULE *******/
+#nav-trigger-label__open, #sub-nav-trigger-label__close {
+  position: absolute;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40px;
+  width: 40px; }
+
+/*Hamburger*/
+#nav-trigger-label__open {
+  left: 15px;
+  top: 8px;
+  z-index: 3;
+  background-image: url("../imgs/menu.svg"); }
+
+/*Cancel-circle*/
+#sub-nav-trigger-label__close {
+  left: 3%;
+  top: 3%;
+  z-index: 2;
+  background-color: transparent; }
+
+.subnav-close-icon {
+  width: 90%;
+  vertical-align: center;
+  z-index: 2; }
+
+/******* SMALL LOGO MODULE *******/
+.nav-header img {
+  width: 70%;
+  vertical-align: center;
+  padding-left: 9%; }
+
+/******* ACCORDION MODULE *******/
+.sub-icon {
+  color: gray;
+  font-size: 1em;
+  padding-right: 10px; }
+
+.ac-small p {
+  font-family: 'Roboto';
+  font-weight: normal;
+  color: black;
+  letter-spacing: 1px;
+  font-size: 1em;
+  padding-left: 20px; }
+
+.accordian label {
+  padding: 3% 0;
+  padding-left: 10%;
+  position: relative;
+  /*z-index: 20;   saving this for possible future animations*/
+  margin: auto;
+  padding-left: 5%;
+  display: block;
+  cursor: pointer;
+  color: #046D8B;
+  line-height: auto;
+  font-size: 1em; }
+
+.accordian label:hover:after,
+.accordian input:checked + label:hover:after {
+  content: '';
+  font-style: bold;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 13px;
+  top: 7px; }
+
+.accordian-header {
+  padding-left: none;
+  letter-spacing: none; }
+  .accordian-header:active, .accordian-header:hover {
+    color: #309292; }
+
+.accordian input {
+  display: none; }
+
+.accordian article {
+  margin-top: -1px;
+  overflow: hidden;
+  height: 0px;
+  position: relative; }
+
+/*ORDERED LISTS AND LIST ITEMS*/
+.sub-detail {
+  padding-left: 3em;
+  padding-top: 1em; }
+
+.ac-small li {
+  list-style: upper-roman;
+  letter-spacing: 1px;
+  padding-bottom: 1em; }
+
+.accordian input:checked ~ article.ac-small {
+  height: auto;
+  padding: 1%; }

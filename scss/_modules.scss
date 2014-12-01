@@ -1,0 +1,165 @@
+
+/*Nav-item Module*/
+
+.nav-item, .sub-nav-item {
+  display: block;
+  padding: 1em;
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #309292;
+}
+
+.nav-item {
+  /* non-critical appearance styles */
+  width:80%;
+  background-color: rgba(41, 128, 185,1.0);
+}
+
+.nav-item:hover,
+.nav-item:active {
+  background-color: #309292;
+}
+
+.sub-nav-item {
+  /* non-critical appearance styles */
+  width: 70%;
+  background-color: #2FB8AC;
+}
+
+.sub-nav-item:hover,
+.sub-nav-item:active {
+  background-color: #309292;
+}
+
+
+/******* INDEXED BUTTON MODULE *******/
+
+#basicRulesBtn {
+    color: white;
+}
+
+.indexed-btn {
+    font-family: 'Roboto Slab';
+    font-style: bold;
+    font-size: 1.2em;
+}
+
+/******* CHECKBOX LABEL MODULE *******/
+
+#nav-trigger-label__open, #sub-nav-trigger-label__close {
+  position: absolute;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+}
+    /*Hamburger*/
+#nav-trigger-label__open {
+  left: 15px; top: 8px;
+  z-index: 3;
+  background-image: url("../imgs/menu.svg");
+}
+    /*Cancel-circle*/
+ #sub-nav-trigger-label__close {
+  left: 3%;
+  top: 3%;
+  z-index: 2;
+  background-color: transparent;
+}
+
+.subnav-close-icon {
+width: 90%;
+vertical-align: center;
+z-index: 2;
+}
+
+/******* SMALL LOGO MODULE *******/
+
+.nav-header img {
+  width: 70%;
+  vertical-align: center;
+  padding-left: 9%;
+}
+
+
+/******* ACCORDION MODULE *******/
+
+.sub-icon {
+  color: gray;
+  font-size: 1em;
+  padding-right: 10px;
+}
+
+.ac-small p {
+  font-family: 'Roboto';
+  font-weight: normal;
+  color: black;
+  letter-spacing: 1px;
+  font-size: 1em;
+  padding-left: 20px;
+}
+
+.accordian label{
+  padding: 3% 0;
+  padding-left: 10%;
+  position: relative;
+  /*z-index: 20;   saving this for possible future animations*/
+  margin: auto;
+  padding-left: 5%;
+  display: block;
+  cursor: pointer;
+  color: #046D8B;
+  line-height: auto;
+  font-size: 1em;
+  }
+
+.accordian label:hover:after,
+.accordian input:checked + label:hover:after {
+  content: '';
+  font-style: bold;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 13px;
+  top: 7px;
+}
+
+.accordian-header {
+  padding-left: none;
+  letter-spacing: none;
+    &:active, &:hover {
+      color:#309292;
+    }
+}
+
+.accordian input{
+  display: none;
+}
+
+.accordian article{
+  margin-top: -1px;
+  overflow: hidden;
+  height: 0px;
+  position: relative;
+}
+
+/*ORDERED LISTS AND LIST ITEMS*/
+.sub-detail {
+  padding-left: 3em;
+  padding-top: 1em;
+}
+
+.ac-small li {
+  list-style: upper-roman;
+  letter-spacing: 1px;
+  padding-bottom:1em;
+}
+
+.accordian input:checked ~ article.ac-small{
+  height: auto;
+  padding: 1%;
+}
+

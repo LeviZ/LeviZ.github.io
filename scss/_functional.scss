@@ -15,29 +15,24 @@
 
 /* Make some moving parts smooth */
 .nav-trigger + label, .site-wrap, .nav, #nav-trigger-label__open {
-  transition: transform 0.2s;
-  -webkit-transition: transform 0.2s;
-  -moz-transition: transform 0.2s;
+  // transition: transform 0.2s;
+  // -webkit-transition: transform 0.2s;
 }
 
 /* Slide main content page */
 .nav-trigger:checked ~ .site-wrap {
   transform: translatex(75%);
   -webkit-transform: translatex(75%);
-  -moz-transform: translatex(75%);
 }
 
 /* Slide hamburger label */
 .nav-trigger:checked + #nav-trigger-label__open {
-  transform: translatex(2350%);
-  -webkit-transform: translatex(2350%);
-  -moz-transform: translatex(2350%);
+  left: 80%;
 }
 
 /* Slide main navigation */
 .sub-nav-trigger:checked ~ .nav {
   transform: translatex(70%);
   -webkit-transform: translatex(70%);
-  -moz-transform: translatex(70%);
 }
 
