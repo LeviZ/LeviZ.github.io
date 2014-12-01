@@ -49,6 +49,8 @@ var throwingContent = document.getElementById('throwingContent');
 var holingOutContent = document.getElementById('holingOutContent');
 var orderOfPlayContent = document.getElementById('orderOfPlayContent');
 var definitionsContent = document.getElementById('definitionsContent');
+// Overlay variable:
+var overlay = document.getElementById('overlay');
 
 function setDisplayNone() {
   outOfBoundsContent.style.display = 'none';
@@ -76,6 +78,18 @@ window.addEventListener("click", function() {
   mainPageEntry.style.display = 'none';
 }, false);
 
+navTriggerInput.onchange = function() {
+  if (navTriggerInput.checked == true) {
+    overlay.style.display = 'block';
+  } else if (navTriggerInput.checked == false){
+    overlay.style.display = 'none';
+  }
+};
+
+overlay.addEventListener("click", function() {
+  navTriggerInput.checked = false;
+  overlay.style.display = 'none';
+}, false);
 
 // Content load button event listeners:
 

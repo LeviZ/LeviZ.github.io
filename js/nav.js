@@ -7,10 +7,12 @@ var subNavTriggerInput = document.getElementById('sub-nav-trigger');
 
 document.getElementsByClassName('nav-close')[1].onclick = function() {
   navTriggerInput.checked = false;
+  overlay.style.display = 'none';
 }
 
 document.getElementsByClassName('nav-close')[0].onclick = function() {
   navTriggerInput.checked = false;
+  overlay.style.display = 'none';
 }
 
 

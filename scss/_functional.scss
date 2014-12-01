@@ -14,9 +14,14 @@
 }
 
 /* Make some moving parts smooth */
-.nav-trigger + label, .site-wrap, .nav, #nav-trigger-label__open {
-  transition: transform 0.2s;
-  -webkit-transition: -webkit-transform 0.2s;
+.site-wrap, .nav {
+  transition: transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s;
+}
+
+.nav-trigger:checked + #nav-trigger-label__open, .nav-trigger + label  {
+  transition: left 0.3s;
+  -webkit-transition: left 0.3s;
 }
 
 /* Slide main content page */
@@ -34,5 +39,15 @@
 .sub-nav-trigger:checked ~ .nav {
   transform: translatex(70%);
   -webkit-transform: translatex(70%);
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: grey;
+  opacity: 0.5;
+  z-index: 4;
+  margin: 0 -1em;
 }
 
