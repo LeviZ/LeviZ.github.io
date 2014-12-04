@@ -15,8 +15,8 @@
   -webkit-transition: -webkit-transform 0.3s; }
 
 .nav-trigger:checked + #nav-trigger-label__open, .nav-trigger + label {
-  transition: left 0.2s;
-  -webkit-transition: left 0.2s; }
+  transition: transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s; }
 
 /* Slide main content page */
 .nav-trigger:checked ~ .site-wrap {
@@ -25,24 +25,22 @@
 
 /* Slide hamburger label */
 .nav-trigger:checked + #nav-trigger-label__open {
-  left: 80%; }
+  transform: 600%;
+  -webkit-transform: translatex(600%); }
 
 /* Slide main navigation */
 .sub-nav-trigger:checked ~ .nav {
-  transform: translatex(70%);
-  -webkit-transform: translatex(70%); }
+  transform: translatex(75%);
+  -webkit-transform: translatex(75%); }
 
 .overlay {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: #333;
-  opacity: 0.5;
-  z-index: 4;
+  background: #064780;
+  opacity: 0.6;
+  z-index: 5;
   margin: 0 -1em; }
-
-html {
-  overflow-x: hidden; }
 
 /******* Base *******/
 body {
@@ -75,6 +73,9 @@ button {
   font-family: 'Roboto Slab';
   font-style: bold;
   border: none; }
+
+html {
+  overflow-x: hidden; }
 
 /* Micro reset */
 *, *:before, *:after {
@@ -131,13 +132,10 @@ html, body {
 
 /******** HEADERS **********/
 .nav-header {
-  display: -webkit-flex;
-  display: -moz-flex;
-  justify-content: flex-start;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  background-color: #064780;
-  height: 70px; }
+  background-color: #064780; }
+  .nav-header img {
+    width: 32%;
+    margin-left: 22%; }
 
 /* header-main will exist if compatability with safari is accomplished*/
 /*.header-main {
@@ -168,19 +166,14 @@ html, body {
   /* non-critical appearance styles */
   width: 80%;
   background-color: #2980b9; }
-
-.nav-item:hover,
-.nav-item:active {
-  background-color: #309292; }
+  .nav-item:hover, .nav-item:active {
+    background-color: #309292; }
 
 .sub-nav-item {
-  /* non-critical appearance styles */
-  width: 70%;
+  width: 80%;
   background-color: #2FB8AC; }
-
-.sub-nav-item:hover,
-.sub-nav-item:active {
-  background-color: #309292; }
+  .sub-nav-item:hover, .sub-nav-item:active {
+    background-color: #309292; }
 
 /******* INDEXED BUTTON MODULE *******/
 #basicRulesBtn {
@@ -190,18 +183,17 @@ html, body {
   font-family: 'Roboto Slab';
   font-style: bold;
   font-size: 1.2em; }
-
-.indexed-btn img {
-  width: 3.5em;
-  margin-bottom: -.5em;
-  margin-left: -4em; }
+  .indexed-btn img {
+    width: 3.5em;
+    margin-bottom: -.5em;
+    margin-left: -4.2em; }
 
 /******* CHECKBOX LABEL MODULE *******/
 #nav-trigger-label__open, #sub-nav-trigger-label__close {
   position: absolute;
   cursor: pointer;
   background-repeat: no-repeat;
-  height: 40px;
+  height: 30px;
   width: 40px; }
 
 /*Hamburger*/
@@ -219,15 +211,7 @@ html, body {
   background-color: transparent; }
 
 .subnav-close-icon {
-  width: 90%;
-  vertical-align: center;
-  z-index: 2; }
-
-/******* SMALL LOGO MODULE *******/
-.nav-header img {
-  width: 70%;
-  vertical-align: center;
-  padding-left: 9%; }
+  width: 1.6em; }
 
 /******* ACCORDION MODULE *******/
 .sub-icon {
@@ -247,7 +231,6 @@ html, body {
   padding: 3% 0;
   padding-left: 10%;
   position: relative;
-  /*z-index: 20;   saving this for possible future animations*/
   margin: auto;
   padding-left: 5%;
   display: block;

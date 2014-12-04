@@ -15,24 +15,18 @@
   /* non-critical appearance styles */
   width:80%;
   background-color: rgba(41, 128, 185,1.0);
-}
-
-.nav-item:hover,
-.nav-item:active {
-  background-color: #309292;
+    &:hover, &:active {
+      background-color: #309292;
+    }
 }
 
 .sub-nav-item {
-  /* non-critical appearance styles */
-  width: 70%;
+  width: 80%;
   background-color: #2FB8AC;
+    &:hover, &:active {
+      background-color: #309292;
+    }
 }
-
-.sub-nav-item:hover,
-.sub-nav-item:active {
-  background-color: #309292;
-}
-
 
 /******* INDEXED BUTTON MODULE *******/
 
@@ -44,13 +38,10 @@
     font-family: 'Roboto Slab';
     font-style: bold;
     font-size: 1.2em;
-}
-
-.indexed-btn {
-  img {
-    width: 3.5em;
-    margin-bottom: -.5em;
-    margin-left: -4em;
+      img {
+        width: 3.5em;
+        margin-bottom: -.5em;
+        margin-left: -4.2em;
   }
 }
 
@@ -60,7 +51,7 @@
   position: absolute;
   cursor: pointer;
   background-repeat: no-repeat;
-  height: 40px;
+  height: 30px;
   width: 40px;
 }
     /*Hamburger*/
@@ -78,19 +69,8 @@
 }
 
 .subnav-close-icon {
-width: 90%;
-vertical-align: center;
-z-index: 2;
+  width: 1.6em;
 }
-
-/******* SMALL LOGO MODULE *******/
-
-.nav-header img {
-  width: 70%;
-  vertical-align: center;
-  padding-left: 9%;
-}
-
 
 /******* ACCORDION MODULE *******/
 
@@ -113,7 +93,6 @@ z-index: 2;
   padding: 3% 0;
   padding-left: 10%;
   position: relative;
-  /*z-index: 20;   saving this for possible future animations*/
   margin: auto;
   padding-left: 5%;
   display: block;
