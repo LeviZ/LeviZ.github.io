@@ -25,8 +25,8 @@
 
 /* Slide hamburger label */
 .nav-trigger:checked + #nav-trigger-label__open {
-  transform: 600%;
-  -webkit-transform: translatex(600%); }
+  transform: 700%;
+  -webkit-transform: translatex(700%); }
 
 /* Slide main navigation */
 .sub-nav-trigger:checked ~ .nav {

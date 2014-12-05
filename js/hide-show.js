@@ -190,3 +190,28 @@ definitionsBtn.addEventListener("click", function() {
   setDisplayNone();
   definitionsContent.style.display = 'block';
 }, false);
+
+
+// Toggle accordion icon
+
+// check if it has class
+function checkClass(elem, className) {
+  return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+}
+// toggleClass
+function toggleClass(elem, className) {
+  var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, " " ) + ' ';
+    if (checkClass(elem, className)) {
+        while (newClass.indexOf(" " + className + " ") >= 0 ) {
+            newClass = newClass.replace( " " + className + " " , " " );
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    } else {
+        elem.className += ' ' + className;
+    }
+}
+
+document.getElementById('').onclick = function() {
+    toggleClass(this, 'icon-minus');
+}
+
