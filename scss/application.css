@@ -16,7 +16,8 @@
 
 .nav-trigger:checked + #nav-trigger-label__open, .nav-trigger + label {
   transition: transform 0.3s;
-  -webkit-transition: -webkit-transform 0.3s; }
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: left 0.3s; }
 
 /* Slide main content page */
 .nav-trigger:checked ~ .site-wrap {
@@ -25,8 +26,7 @@
 
 /* Slide hamburger label */
 .nav-trigger:checked + #nav-trigger-label__open {
-  transform: 700%;
-  -webkit-transform: translatex(700%); }
+  left: 80%; }
 
 /* Slide main navigation */
 .sub-nav-trigger:checked ~ .nav {
@@ -190,7 +190,7 @@ html, body {
 
 /******* CHECKBOX LABEL MODULE *******/
 #nav-trigger-label__open, #sub-nav-trigger-label__close {
-  position: absolute;
+  position: fixed;
   cursor: pointer;
   background-repeat: no-repeat;
   height: 30px;

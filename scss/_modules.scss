@@ -48,7 +48,7 @@
 /******* CHECKBOX LABEL MODULE *******/
 
 #nav-trigger-label__open, #sub-nav-trigger-label__close {
-  position: absolute;
+  position: fixed;
   cursor: pointer;
   background-repeat: no-repeat;
   height: 30px;
@@ -56,7 +56,8 @@
 }
     /*Hamburger*/
 #nav-trigger-label__open {
-  left: 15px; top: 8px;
+  left: 15px;
+  top: 8px;
   z-index: 3;
   background-image: url("../imgs/menu.svg");
 }
