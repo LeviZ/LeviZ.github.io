@@ -5,14 +5,11 @@
 var navTriggerInput = document.getElementById('nav-trigger');
 var subNavTriggerInput = document.getElementById('sub-nav-trigger');
 
-document.getElementsByClassName('nav-close')[1].onclick = function() {
-  navTriggerInput.checked = false;
-  overlay.style.display = 'none';
-}
-
-document.getElementsByClassName('nav-close')[0].onclick = function() {
-  navTriggerInput.checked = false;
-  overlay.style.display = 'none';
+for (var i = 0, els = document.getElementsByClassName('nav-close'); i < els.length; i++) {
+  els[i].addEventListener('click', function() {
+    navTriggerInput.checked = false;
+    overlay.style.display = 'none';
+  });
 }
 
 

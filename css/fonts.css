@@ -52,6 +52,9 @@
   content: "\e606";
 }
 .icon-plus3:before {
-  content: "\e607";
+  content: "\e607"; /* plus */
+}
+.expanded .icon-plus3:before {
+  content: "\e603"; /* minus */
 }
 
