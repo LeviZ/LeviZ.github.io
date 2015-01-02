@@ -213,5 +213,5 @@ function toggleClass(elem, className) {
 
 document.getElementsByClassName('accordian-header')[0].onclick = function() {
     toggleClass(this, 'icon-minus, sub-icon');
-};`
+};
 
