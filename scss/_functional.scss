@@ -52,3 +52,7 @@
   z-index: 5;
   margin: 0 -1em;
 }
+
+.nav-trigger:checked ~ .overlay {
+  transition: opacity 0.3s;
+}

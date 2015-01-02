@@ -192,12 +192,12 @@ definitionsBtn.addEventListener("click", function() {
 }, false);
 
 
-// Toggle accordion icon
+// // Toggle accordion icon
 
 // check if it has class
 function checkClass(elem, className) {
   return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
-}
+};
 // toggleClass
 function toggleClass(elem, className) {
   var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, " " ) + ' ';
@@ -209,9 +209,9 @@ function toggleClass(elem, className) {
     } else {
         elem.className += ' ' + className;
     }
-}
+};
 
-document.getElementById('').onclick = function() {
-    toggleClass(this, 'icon-minus');
-}
+document.getElementsByClassName('accordian-header')[0].onclick = function() {
+    toggleClass(this, 'icon-minus, sub-icon');
+};`
 
