@@ -1,6 +1,3 @@
-// Main page load button event listener:
-var mainPageEntry = document.getElementById('mainPageEntry');
-
 // Variables of buttons on the page:
 
 var basicRulesBtn = document.getElementById('basicRulesBtn');
@@ -53,30 +50,12 @@ var definitionsContent = document.getElementById('definitionsContent');
 var overlay = document.getElementById('overlay');
 
 function setDisplayNone() {
-  outOfBoundsContent.style.display = 'none';
-  lostDiscContent.style.display = 'none';
-  obstaclesContent.style.display = 'none';
-  courtesyContent.style.display = 'none';
-  optionalContent.style.display = 'none';
-  excessiveContent.style.display = 'none';
-  misplayContent.style.display = 'none';
-  mandatoriesContent.style.display = 'none';
-  interferenceContent.style.display = 'none';
-  provisionalContent.style.display = 'none';
-  applicationContent.style.display = 'none';
-  descriptionContent.style.display = 'none';
-  teeingOffContent.style.display = 'none';
-  establishingContent.style.display = 'none';
-  markingContent.style.display = 'none';
-  throwingContent.style.display = 'none';
-  holingOutContent.style.display = 'none';
-  orderOfPlayContent.style.display = 'none';
-  definitionsContent.style.display = 'none';
+  var contentParent = document.getElementById('content-parent');
+  var sections = contentParent.children;
+  for (var i = 0; i < sections.length; i++) {
+    sections[i].style.display = 'none';
+  }
 }
-
-window.addEventListener("click", function() {
-  mainPageEntry.style.display = 'none';
-}, false);
 
 navTriggerInput.onchange = function() {
   if (navTriggerInput.checked == true) {
