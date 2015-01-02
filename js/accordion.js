@@ -1,11 +1,3 @@
-function setDisplayNone() {
-  var contentParent = document.getElementById('content-parent');
-  var sections = contentParent.children;
-  for (var i = 0; i < sections.length; i++) {
-    sections[i].style.display = 'none';
-  }
-}
-
 // check if it has class
 function checkClass(elem, className) {
   return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
@@ -28,17 +20,4 @@ document.addEventListener('click', function(event) {
   var target = event.target;
   if (target.tagName == 'SPAN') target = target.parentNode;
   if (checkClass(target, 'accordian-header')) toggleClass(target, 'expanded');
-})
-
-// Set a top-level event listener to handle all nav headers
-document.addEventListener('click', function(event) {
-  var target = event.target;
-  if (target.tagName == 'BUTTON' && /nav-item$/.test(target.className) && /Btn$/.test(target.id)) {
-    setDisplayNone();
-    var contentId = target.id.replace(/Btn$/, 'Content');
-    var contentSection = document.getElementById(contentId);
-    if (contentSection) {
-      contentSection.style.display = 'block';
-    }
-  }
 })

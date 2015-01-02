@@ -8,14 +8,6 @@ var overlay = document.getElementById('overlay');
 var navTriggerInput = document.getElementById('nav-trigger');
 var subNavTriggerInput = document.getElementById('sub-nav-trigger');
 
-for (var i = 0, els = document.getElementsByClassName('nav-close'); i < els.length; i++) {
-  els[i].addEventListener('click', function() {
-    navTriggerInput.checked = false;
-    overlay.style.display = 'none';
-  });
-}
-
-
 navTriggerInput.addEventListener('change', function() {
   overlay.style.display = navTriggerInput.checked ? 'block' : 'none';
 });
@@ -48,6 +40,33 @@ window.addEventListener("click", function() {
   }
 });
 
+function setDisplayNone() {
+  var contentParent = document.getElementById('content-parent');
+  var sections = contentParent.children;
+  for (var i = 0; i < sections.length; i++) {
+    sections[i].style.display = 'none';
+  }
+}
+
+function navigateToContent(contentId) {
+  var contentSection = document.getElementById(contentId);
+  if (contentSection) {
+    setDisplayNone();
+    contentSection.style.display = 'block';
+    navTriggerInput.checked = false;
+    overlay.style.display = 'none';
+  }
+}
+
+// Set a top-level event listener to handle all nav headers
+document.addEventListener('click', function(event) {
+  var target = event.target;
+  if (/nav-(item|header)$/.test(target.className) && /Btn$/.test(target.id)) {
+  // if (target.tagName == 'BUTTON' && /nav-item$/.test(target.className) && /Btn$/.test(target.id)) {
+    var contentId = target.id.replace(/Btn$/, 'Content');
+    navigateToContent(contentId);
+  }
+})
 
 
 
