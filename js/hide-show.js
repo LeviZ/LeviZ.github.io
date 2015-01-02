@@ -1,6 +1,3 @@
-// Overlay variable:
-var overlay = document.getElementById('overlay');
-
 function setDisplayNone() {
   var contentParent = document.getElementById('content-parent');
   var sections = contentParent.children;
@@ -8,22 +5,6 @@ function setDisplayNone() {
     sections[i].style.display = 'none';
   }
 }
-
-navTriggerInput.onchange = function() {
-  if (navTriggerInput.checked == true) {
-    overlay.style.display = 'block';
-  } else if (navTriggerInput.checked == false){
-    overlay.style.display = 'none';
-  }
-};
-
-overlay.addEventListener("click", function() {
-  navTriggerInput.checked = false;
-  overlay.style.display = 'none';
-}, false);
-
-
-// // Toggle accordion icon
 
 // check if it has class
 function checkClass(elem, className) {
