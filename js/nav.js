@@ -27,19 +27,6 @@ document.getElementById('nav-reset').addEventListener("click", function() {
 });
 
 
-// Hide/show sub nav checkbox label
-
-var menuLabel = document.getElementById('nav-trigger-label__open');
-var closeLabel = document.getElementById('sub-nav-trigger-label__close');
-
-window.addEventListener("click", function() {
-  if (subNavTriggerInput.checked === true) {
-    closeLabel.style.display = 'block';
-  } else {
-    closeLabel.style.display = 'none';
-  }
-});
-
 function setDisplayNone() {
   var contentParent = document.getElementById('content-parent');
   var sections = contentParent.children;
