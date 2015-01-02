@@ -61,9 +61,8 @@ function navigateToContent(contentId) {
 // Set a top-level event listener to handle all nav headers
 document.addEventListener('click', function(event) {
   var target = event.target;
-  if (/nav-(item|header)$/.test(target.className) && /Btn$/.test(target.id)) {
-  // if (target.tagName == 'BUTTON' && /nav-item$/.test(target.className) && /Btn$/.test(target.id)) {
-    var contentId = target.id.replace(/Btn$/, 'Content');
+  if (target.getAttribute('nav-target')) {
+    var contentId = target.getAttribute('nav-target') + 'Content';
     navigateToContent(contentId);
   }
 })
