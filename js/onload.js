@@ -6,6 +6,5 @@ window.onload = function() {
     document.getElementById('nav-trigger').onchange();
   }, 2000);
   closeLabel.style.display = 'none';
-  setDisplayNone();
   overlay.style.display = 'none';
 };
