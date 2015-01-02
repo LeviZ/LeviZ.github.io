@@ -61,9 +61,13 @@ function navigateToContent(contentId) {
 // Set a top-level event listener to handle all nav headers
 document.addEventListener('click', function(event) {
   var target = event.target;
-  if (target.getAttribute('nav-target')) {
-    var contentId = target.getAttribute('nav-target') + 'Content';
-    navigateToContent(contentId);
+  while (target) {
+    if (target.getAttribute('nav-target')) {
+      var contentId = target.getAttribute('nav-target') + 'Content';
+      navigateToContent(contentId);
+      break;
+    }
+    target = target.parentElement; // loop up in case a child of an element with nav-parent is clicked
   }
 })
 
