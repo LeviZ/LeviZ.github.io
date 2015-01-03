@@ -10,18 +10,9 @@ var subNavTriggerInput = document.getElementById('sub-nav-trigger');
 
 navTriggerInput.addEventListener('change', function() {
   overlay.style.display = navTriggerInput.checked ? 'block' : 'none';
-});
 
-overlay.addEventListener('click', function() {
-  navTriggerInput.checked = false;
-  overlay.style.display = 'none';
-});
-
-
-// Nav reset. Ensures only main nav is opened everytime hamburger is clicked
-
-document.getElementById('nav-reset').addEventListener("click", function() {
-  if (navTriggerInput.checked === false) {
+  // Nav reset. Ensures only main nav is opened everytime hamburger is clicked
+  if (!navTriggerInput.checked) {
     subNavTriggerInput.checked = false;
   }
 });
@@ -40,8 +31,8 @@ function navigateToContent(contentId) {
   if (contentSection) {
     setDisplayNone();
     contentSection.style.display = 'block';
-    navTriggerInput.checked = false;
-    overlay.style.display = 'none';
+    if (navTriggerInput.checked)
+      navTriggerInput.click(); // click so that it fires the change event
   }
 }
 
