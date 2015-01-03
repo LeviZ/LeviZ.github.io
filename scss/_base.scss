@@ -1,45 +1,12 @@
 /******* Base *******/
 
-body {
-  /* Without this, the body has excess horizontal scroll when the menu is open */
-  overflow-x: hidden;
-  color: #000;
-  font-family: 'Roboto', sans-serif, 'Roboto Slab',serif, "Arial";
-  margin: 0;
-  padding: 0;
-}
-
-h1, .h1 {
-    font-family: 'Roboto Slab';
-    font-weight: bold;
-    font-size: 1.5em;
-    color:#046D8B;
-}
-
-h2, .h2 {
-    font-family: 'Roboto Slab';
-    font-weight: normal;
-    font-size: 1.2em;
-    color:#309292;
-}
-
-h3, .h3 {
-    font-family: 'Roboto Slab';
-    font-weight: normal;
-    font-size: 1em;
-    color:gray;
+button, h1, h2 {
+  font-family: 'Roboto Slab';
 }
 
 button {
-  font-family: 'Roboto Slab';
   font-style: bold;
   border: none;
-}
-
-// Don't allow x axis scroll, ever
-
-html {
-  overflow-x: hidden;
 }
 
 p, ol {
@@ -50,5 +17,16 @@ p, ol {
 
 
 /* Micro reset */
-*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
-html, body { height: 100%; width: 100%; font-family: Helvetica, Arial, sans-serif; }
+*, *:before, *:after {
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}

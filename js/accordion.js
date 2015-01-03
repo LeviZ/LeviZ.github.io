@@ -19,5 +19,5 @@ function toggleClass(elem, className) {
 document.addEventListener('click', function(event) {
   var target = event.target;
   if (target.tagName == 'SPAN') target = target.parentNode;
-  if (checkClass(target, 'accordian-header')) toggleClass(target, 'expanded');
+  if (checkClass(target, 'accordion-header')) toggleClass(target, 'expanded');
 })

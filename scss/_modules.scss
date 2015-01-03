@@ -1,28 +1,25 @@
 
-/*Nav-item Module*/
+/******* NAV ITEM BUTTON MODULE *******/
 
 .nav-item, .sub-nav-item {
   display: block;
-  padding: 1em;
+  padding: 1em 2em;
   color: white;
-  font-size: 1.2em;
+  font-size: 1em;
   text-align: center;
   letter-spacing: 1px;
   border-bottom: 1px solid #309292;
+  width: 80%;
 }
 
 .nav-item {
-  /* non-critical appearance styles */
-  width:80%;
   background-color: rgba(41, 128, 185,1.0);
-  padding: 0 .5em;
     &:hover, &:active {
       background-color: #309292;
     }
 }
 
 .sub-nav-item {
-  width: 80%;
   background-color: #2FB8AC;
     &:hover, &:active {
       background-color: #309292;
@@ -31,24 +28,24 @@
 
 /******* INDEXED BUTTON MODULE *******/
 
-#basicRulesBtn {
-    color: white;
-}
-
 .indexed-btn {
-    font-family: 'Roboto Slab';
-    font-style: bold;
-    font-size: 1.2em;
-      img {
-        width: 3.5em;
-        margin-bottom: -.5em;
-        margin-left: -4.2em;
-  }
+  font-family: 'Roboto Slab';
+  font-style: bold;
+  font-size: 1em;
+  letter-spacing: 1px;
+    img {
+      width: 3.5em;
+      margin-bottom: -.5em;
+      margin-left: -4.2em;
+    }
+    span {
+      color: white;
+    }
 }
 
 /******* CHECKBOX LABEL MODULE *******/
 
-#nav-trigger-label__open, #sub-nav-trigger-label__close {
+#nav-trigger-label__open {
   position: fixed;
   cursor: pointer;
   background-repeat: no-repeat;
@@ -62,91 +59,62 @@
   z-index: 3;
   background-image: url("../imgs/menu.svg");
 }
-    /*Cancel-circle*/
- #sub-nav-trigger-label__close {
-  left: 1em;
-  top: 1.4em;
-  z-index: 2;
-  background-color: transparent;
-}
-
-.subnav-close-icon {
-  width: 1.6em;
-}
 
 /******* ACCORDION MODULE *******/
 
-.sub-icon {
+.accordion-header span{
   color: gray;
-  font-size: 1em;
-  padding-right: 10px;
+  padding-right: .7em;
 }
 
-.ac-small p {
+.accordion-body p {
   font-family: 'Roboto';
-  font-weight: normal;
-  color: black;
+  color: #333;
   letter-spacing: 1px;
-  font-size: 1em;
   padding-left: 20px;
 }
 
-.accordian label{
-  padding: 3% 0;
-  padding-left: 10%;
-  position: relative;
-  margin: auto;
-  padding-left: 5%;
+.accordion label {
+  padding: 1em 0 0 1em;
   display: block;
   cursor: pointer;
   color: #046D8B;
   line-height: auto;
-  font-size: 1em;
   }
 
-.accordian label:hover:after,
-.accordian input:checked + label:hover:after {
-  content: '';
-  font-style: bold;
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  right: 13px;
-  top: 7px;
-}
-
-.accordian-header {
+.accordion-header {
   padding-left: none;
   letter-spacing: none;
-    &:active, &:hover {
-      color:#309292;
-    }
+  &:active, &:hover {
+    color:#309292;
+  }
 }
-
-.accordian input{
+.accordion input {
   display: none;
 }
 
-.accordian article{
-  margin-top: -1px;
+.accordion-body {
   overflow: hidden;
   height: 0px;
-  position: relative;
 }
 
-/*ORDERED LISTS AND LIST ITEMS*/
-.sub-detail {
+.accordion h2 {
+  font-size: 1.1em;
+}
+
+/* ACCORDION LISTS AND LIST ITEMS*/
+.accordion-body ol {
   padding-left: 3em;
   padding-top: 1em;
 }
 
-.ac-small li {
+.accordion-body li {
   list-style: upper-roman;
   letter-spacing: 1px;
-  padding-bottom:1em;
+  padding-bottom: 1em;
 }
 
-.accordian input:checked ~ article.ac-small{
+.accordion input:checked ~ article.accordion-body{
   height: auto;
   padding: 1%;
 }

@@ -25,7 +25,7 @@
   bottom: 0;
   left: 0;
   z-index: 1;
-  overflow-y: scroll;
+  overflow-y: auto;
   background-color: #046D8B;
 }
 
@@ -41,21 +41,16 @@
   bottom: 0;
   left: 0;
   z-index: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
   background-color: #2FB8AC;
 }
 
 /******** HEADERS **********/
 
-.nav-header {
-  display: -webkit-flex;
-  display: -moz-flex;
-  justify-content: flex-start;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
+/*.nav-header {
   background-color: #064780;
   height: 70px;
-}
+}*/
 
 /* header-main will exist if compatability with safari is accomplished*/
 
@@ -66,16 +61,23 @@
   position: fixed;
 }*/
 
-/******** MAIN PAGE ENTRY MODULE **********/
+/******** MAIN PAGE ENTRY **********/
 
 .main-page-entry {
   padding: 5% 15% 0;
 }
 
-/******** MAIN PAGE ENTRY MODULE **********/
+/******** CONTENT POSITION **********/
 
 .content-position {
   padding-top: 50px;
+}
+
+.content-position h1 {
+  font-size: 1.5em;
+  color:#046D8B;
+  margin-bottom: 1em;
+  text-align: center;
 }
 
 
