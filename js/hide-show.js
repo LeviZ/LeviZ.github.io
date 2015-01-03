@@ -61,4 +61,4 @@ document.addEventListener('click', function(event) {
       contentSection.style.display = 'block';
     }
   }
-})
+});
