@@ -170,7 +170,8 @@ html, body {
 .nav-item {
   /* non-critical appearance styles */
   width: 80%;
-  background-color: #2980b9; }
+  background-color: #2980b9;
+  padding: 0 .5em; }
   .nav-item:hover, .nav-item:active {
     background-color: #309292; }
 
