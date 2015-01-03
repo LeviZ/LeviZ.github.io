@@ -115,13 +115,12 @@ html, body {
     width: 32%;
     margin-left: 22%; }
 
-/* header-main will exist if compatability with safari is accomplished*/
-/*.header-main {
+.header-main {
   width: 100%;
   height: 50px;
   background-color: white;
-  position: fixed;
-}*/
+  position: fixed; }
+
 /******** MAIN PAGE ENTRY **********/
 .main-page-entry {
   padding: 5% 15% 0; }
