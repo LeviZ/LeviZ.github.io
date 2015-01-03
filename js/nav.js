@@ -36,7 +36,7 @@ function navigateToContent(contentId) {
   }
 }
 
-// Set a top-level event listener to handle all nav headers
+// Set a top-level event listener to handle all nav links
 document.addEventListener('click', function(event) {
   var target = event.target;
   while (target) {
