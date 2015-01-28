@@ -2,7 +2,7 @@
 function checkClass(elem, className) {
   return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
 };
-// toggleClass
+// replace the class
 function toggleClass(elem, className) {
   var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, " " ) + ' ';
     if (checkClass(elem, className)) {
@@ -15,9 +15,13 @@ function toggleClass(elem, className) {
     }
 };
 
-// Set a top-level event listener to handle all accordian headers
+// Set a top-level event listener to target all accordian headers, toggle icon class
 document.addEventListener('click', function(event) {
   var target = event.target;
   if (target.tagName == 'SPAN') target = target.parentNode;
   if (checkClass(target, 'accordion-header')) toggleClass(target, 'expanded');
-})
+});
+
+
+
+

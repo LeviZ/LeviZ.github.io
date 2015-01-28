@@ -10,14 +10,8 @@
   clip: rect(0, 0, 0, 0); }
 
 /* Make some moving parts smooth */
-.site-wrap, .nav {
-  transition: transform 0.3s;
-  transition: -webkit-transform 0.3s; }
-
-.nav-trigger:checked + #nav-trigger-label__open, .nav-trigger + label {
-  transition: transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: left 0.3s; }
+.site-wrap, .nav, .nav-trigger + label {
+  transition: all .6s ease; }
 
 /* Slide main content page */
 .nav-trigger:checked ~ .site-wrap {
@@ -51,9 +45,8 @@ button {
   border: none; }
 
 p, ol {
-  background-color: rgba(41, 128, 185, 0.2);
-  border-radius: 10px;
-  padding: .4em; }
+  padding: .4em;
+  color: #046D8B; }
 
 /* Micro reset */
 *, *:before, *:after {
@@ -76,11 +69,10 @@ html, body {
   /* Needs a background or else the nav will show through */
   position: relative;
   top: 0;
-  bottom: 100%;
   left: 0;
   z-index: 2;
   padding: 0 1em;
-  background-size: 100%; }
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
 
 /******** MAIN NAVIGATION **********/
 .nav {
@@ -93,7 +85,8 @@ html, body {
   left: 0;
   z-index: 1;
   overflow-y: auto;
-  background-color: #046D8B; }
+  background-color: #046D8B;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
 /******** SUB NAVIGATION **********/
 .sub-nav {
@@ -113,17 +106,14 @@ html, body {
   background-color: #064780; }
   .nav-header img {
     width: 32%;
-    margin-left: 22%; }
+    margin-left: 22%;
+    cursor: pointer; }
 
 .header-main {
   width: 100%;
   height: 50px;
   background-color: white;
   position: fixed; }
-
-/******** MAIN PAGE ENTRY **********/
-.main-page-entry {
-  padding: 5% 15% 0; }
 
 /******** CONTENT POSITION **********/
 .content-position {
@@ -134,6 +124,12 @@ html, body {
   color: #046D8B;
   margin-bottom: 1em;
   text-align: center; }
+
+/******** MAIN PAGE ENTRY **********/
+.main-page-entry {
+  padding: 5% 15% 0; }
+  .main-page-entry h1 {
+    font-size: 1em; }
 
 /******* NAV ITEM BUTTON MODULE *******/
 .nav-item, .sub-nav-item {
@@ -170,15 +166,13 @@ html, body {
     color: white; }
 
 /******* CHECKBOX LABEL MODULE *******/
+/*Hamburger*/
 #nav-trigger-label__open {
   position: fixed;
   cursor: pointer;
   background-repeat: no-repeat;
   height: 30px;
-  width: 40px; }
-
-/*Hamburger*/
-#nav-trigger-label__open {
+  width: 40px;
   left: 15px;
   top: 8px;
   z-index: 3;
@@ -191,34 +185,37 @@ html, body {
 
 .accordion-body p {
   font-family: 'Roboto';
-  color: #333;
   letter-spacing: 1px;
   padding-left: 20px; }
 
-.accordion label {
-  padding: 1em 0 0 1em;
+.accordion-header {
+  padding: .5em;
   display: block;
   cursor: pointer;
-  color: #046D8B;
-  line-height: auto; }
-
-.accordion-header {
-  padding-left: none;
-  letter-spacing: none; }
+  color: grey;
+  line-height: auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
   .accordion-header:active, .accordion-header:hover {
-    color: #309292; }
+    background-color: #2980b9;
+    color: #eee; }
 
 .accordion input {
   display: none; }
 
 .accordion-body {
-  overflow: hidden;
-  height: 0px; }
+  overflow: auto;
+  max-height: 0;
+  transition: all .4s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background-color: #ddd; }
 
 .accordion h2 {
   font-size: 1.1em; }
 
-/* ACCORDION LISTS AND LIST ITEMS*/
+.accordion input:checked ~ .accordion-body {
+  max-height: 15em; }
+
+/* ACCORDION LISTS AND LIST ITEMS */
 .accordion-body ol {
   padding-left: 3em;
   padding-top: 1em; }
@@ -227,7 +224,3 @@ html, body {
   list-style: upper-roman;
   letter-spacing: 1px;
   padding-bottom: 1em; }
-
-.accordion input:checked ~ article.accordion-body {
-  height: auto;
-  padding: 1%; }

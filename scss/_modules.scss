@@ -45,15 +45,13 @@
 
 /******* CHECKBOX LABEL MODULE *******/
 
+    /*Hamburger*/
 #nav-trigger-label__open {
   position: fixed;
   cursor: pointer;
   background-repeat: no-repeat;
   height: 30px;
   width: 40px;
-}
-    /*Hamburger*/
-#nav-trigger-label__open {
   left: 15px;
   top: 8px;
   z-index: 3;
@@ -69,24 +67,20 @@
 
 .accordion-body p {
   font-family: 'Roboto';
-  color: #333;
   letter-spacing: 1px;
   padding-left: 20px;
 }
 
-.accordion label {
-  padding: 1em 0 0 1em;
+.accordion-header {
+  padding: .5em;
   display: block;
   cursor: pointer;
-  color: #046D8B;
+  color: grey;
   line-height: auto;
-  }
-
-.accordion-header {
-  padding-left: none;
-  letter-spacing: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   &:active, &:hover {
-    color:#309292;
+    background-color: rgba(41, 128, 185,1.0);
+    color: #eee;
   }
 }
 .accordion input {
@@ -94,15 +88,22 @@
 }
 
 .accordion-body {
-  overflow: hidden;
-  height: 0px;
+  overflow: auto;
+  max-height: 0;
+  transition: all .4s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  background-color: #ddd;
 }
 
 .accordion h2 {
   font-size: 1.1em;
 }
 
-/* ACCORDION LISTS AND LIST ITEMS*/
+.accordion input:checked ~ .accordion-body {
+  max-height: 15em;
+}
+
+/* ACCORDION LISTS AND LIST ITEMS */
 .accordion-body ol {
   padding-left: 3em;
   padding-top: 1em;
@@ -114,8 +115,5 @@
   padding-bottom: 1em;
 }
 
-.accordion input:checked ~ article.accordion-body{
-  height: auto;
-  padding: 1%;
-}
+
 

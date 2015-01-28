@@ -14,15 +14,8 @@
 }
 
 /* Make some moving parts smooth */
-.site-wrap, .nav {
-  transition: transform 0.3s;
-  transition: -webkit-transform 0.3s;
-}
-
-.nav-trigger:checked + #nav-trigger-label__open, .nav-trigger + label  {
-  transition: transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: left 0.3s
+.site-wrap, .nav, .nav-trigger + label {
+  transition: all .6s ease;
 }
 
 /* Slide main content page */
