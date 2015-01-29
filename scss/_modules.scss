@@ -82,6 +82,7 @@
     color: #eee;
   }
 }
+
 .accordion input {
   display: none;
 }
@@ -91,12 +92,12 @@
   max-height: 0;
   transition: all .4s ease;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  background-color: #2FB8AC;
+  background-color: white;
   p {
     font-family: 'Roboto';
     letter-spacing: 1px;
     padding-left: 20px;
-    color: #eee;
+    color: #046D8B;
   }
 }
 
